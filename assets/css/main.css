@@ -1244,12 +1244,12 @@ h6 {
 }
 
 h1 {
-    font-size: 2.4em;
+    font-size: 1.5em;
     letter-spacing: -0.015em;
 }
 
 h2 {
-    font-size: 1.8em;
+    font-size: 1.2em;
     letter-spacing: -0.015em;
 }
 
@@ -1257,7 +1257,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-size: 1.25em;
+    font-size: 0.75em;
     letter-spacing: -0.015em;
 }
 
@@ -1418,7 +1418,7 @@ article:last-child {
 }
 
 header {
-    margin: 0 0 1.5em 0;
+    margin: 0 0 0.5em 0;
 }
 
 header>p {
@@ -1660,7 +1660,7 @@ ul.actions li:first-child {
 
 #nav {
     text-align: center;
-    height: 4.25em;
+    height: 3.5em;
     cursor: default;
 }
 
@@ -1671,7 +1671,7 @@ ul.actions li:first-child {
     width: 1em;
     height: 1em;
     line-height: 0.9em;
-    font-size: 2.5em;
+    font-size: 2.0em;
     margin: 0 0.25em 0 0.25em;
     opacity: 0.35;
     outline: 0;
@@ -2204,4 +2204,12 @@ ul.contact-icons.color4>li:before {
 
 #contact>form>section>ul>li {
     padding: 1em;
+}
+
+#publication>section>div>ol>li {
+    font-size: 11pt;
+}
+
+#publication>section>div>ol>li>p>strong {
+    font-size: 13pt;
 }
