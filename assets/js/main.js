@@ -224,8 +224,10 @@ function updown(s) {
     url = window.location.href;
     data = url.split('/')
     page_name = data[data.length - 1]
-    page_name = page_name.substr(10)
-    pages = ['#home', '#publication', '#education', '#awards', '#contact']
+    page_name = page_name.split('#')
+    page_name = page_name[page_name.length - 1]
+    console.log(page_name)
+    pages = ['home', 'publication', 'education', 'awards', 'contact']
     index = 0;
     for (i = 0; i < pages.length; i++) {
         tmp = pages[i];
@@ -247,7 +249,7 @@ function updown(s) {
         index = index + 1;
     }
     new_page = pages[index]
-    window.location.href = new_page;
+    window.location.href = '#' + new_page;
 }
 
 keyboardJS.bind('left', (e) => {
