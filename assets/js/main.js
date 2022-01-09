@@ -228,7 +228,7 @@ if (url.startsWith('https://kaifeng-h.github.io/login.html?code=')) {
         $.ajax({
             type: 'POST',
             url: 'https://github.com/login/oauth/access_token',
-            headers: { 'Access-Control-Allow-Origin': 'https://github.com/login/oauth/access_token' },
+            headers: { 'Access-Control-Allow-Origin': 'https://kaifeng-h.github.io/login.html' },
             data: data,
             success: function(jsondata) {
                 console.log(jsondata);
@@ -293,15 +293,6 @@ keyboardJS.bind('pagedown', (e) => {
 keyboardJS.bind('h + k+ f', (e) => {
     console.log('internal');
     window.location.href = "https://github.com/login/oauth/authorize?client_id=4edc3aed9d574399fce6";
-    console.log(window.location.href)
-    u = window.location.href
-
-});
-
-keyboardJS.bind('h + k+ f', (e) => {
-    console.log('internal');
-    window.location.href = "https://github.com/login/oauth/authorize?client_id=4edc3aed9d574399fce6";
-    console.log('new loc:')
     console.log(window.location.href)
 
 });
