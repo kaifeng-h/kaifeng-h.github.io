@@ -220,6 +220,20 @@ if (url.startsWith('https://kaifeng-h.github.io/login.html?code=')) {
     console.log(code2)
     if (code2 != null && code2.length == 20) {
         console.log('code success');
+        data = {
+            "client_id": "4edc3aed9d574399fce6",
+            "code": code2,
+            "client_secret": "b6bd02384ce3adb64eb747b96375fc56c3120e37"
+        }
+        $.ajax({
+            type: 'POST',
+            url: 'https://github.com/login/oauth/access_token',
+            data: data,
+            success: function(respinput) {
+                console.log(respinput);
+            },
+            dataType: 'json'
+        });
     }
 
 }
