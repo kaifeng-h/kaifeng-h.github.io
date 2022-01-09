@@ -221,14 +221,13 @@ if (url.startsWith('https://kaifeng-h.github.io/login.html?code=')) {
     if (code2 != null && code2.length == 20) {
         console.log('code success');
         data = {
-            "client_id": "4edc3aed9d574399fce6",
-            "code": code2,
-            "client_secret": "b6bd02384ce3adb64eb747b96375fc56c3120e37"
-        }
+                "code": code2
+            }
+            // url: 'https://github.com/login/oauth/access_token',
         $.ajax({
             type: 'POST',
-            url: 'https://github.com/login/oauth/access_token',
-            headers: { 'Access-Control-Allow-Origin': 'https://kaifeng-h.github.io/login.html' },
+            headers: { 'Access-Control-Allow-Origin': '*' },
+            url: '47.103.203.230:15333/auth',
             data: data,
             success: function(jsondata) {
                 console.log(jsondata);
