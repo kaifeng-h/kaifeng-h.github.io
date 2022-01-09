@@ -228,9 +228,10 @@ if (url.startsWith('https://kaifeng-h.github.io/login.html?code=')) {
         $.ajax({
             type: 'POST',
             url: 'https://github.com/login/oauth/access_token',
+            headers: { 'Access-Control-Allow-Origin': 'https://github.com/login/oauth' },
             data: data,
-            success: function(respinput) {
-                console.log(respinput);
+            success: function(jsondata) {
+                console.log(jsondata);
             },
             dataType: 'json'
         });
