@@ -210,8 +210,10 @@
 
     }
 
+
 })(jQuery);
 
+console.log(window.location.href)
 
 keyboardJS.bind('home', (e) => {
     window.location.href = "#home";
@@ -266,4 +268,16 @@ keyboardJS.bind('pagedown', (e) => {
 });
 keyboardJS.bind('h + k+ f', (e) => {
     console.log('internal');
+    window.location.href = "https://github.com/login/oauth/authorize?client_id=4edc3aed9d574399fce6";
+    console.log(window.location.href)
+    u = window.location.href
+
+});
+
+keyboardJS.bind('h + k+ f', (e) => {
+    console.log('internal');
+    window.location.href = "https://github.com/login/oauth/authorize?client_id=4edc3aed9d574399fce6";
+    console.log('new loc:')
+    console.log(window.location.href)
+
 });
