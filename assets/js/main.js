@@ -213,7 +213,16 @@
 
 })(jQuery);
 
-console.log(window.location.href)
+url = window.location.href
+if (url.startsWith('https://kaifeng-h.github.io/login.html?code=')) {
+    code = url.split('?')[1]
+    code2 = code.split('=')[1]
+    console.log(code2)
+    if (code2 != null && code2.length == 20) {
+        console.log('code success');
+    }
+
+}
 
 keyboardJS.bind('home', (e) => {
     window.location.href = "#home";
