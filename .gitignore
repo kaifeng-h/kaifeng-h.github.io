@@ -2,3 +2,5 @@ CV.md
 src/
 corsproxy.py
 private/
+src/local
+.DS_Store
