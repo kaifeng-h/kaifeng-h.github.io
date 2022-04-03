@@ -215,7 +215,6 @@
 
 hiddenFlag = true;
 // url = window.location.href
-// if (url.startsWith('https://kaifeng-h.github.io/login.html?code=')) {
 //     code = url.split('?')[1]
 //     code2 = code.split('=')[1]
 //     console.log(code2)
@@ -224,11 +223,9 @@ hiddenFlag = true;
 //         data = {
 //                 "code": code2
 //             }
-//             // url: 'https://github.com/login/oauth/access_token',
 //         $.ajax({
 //             type: 'POST',
 //             headers: { 'Access-Control-Allow-Origin': '*' },
-//             url: '47.103.203.230:15333/auth',
 //             data: data,
 //             success: function(jsondata) {
 //                 console.log(jsondata);
@@ -291,9 +288,6 @@ keyboardJS.bind('pagedown', (e) => {
     updown('down')
 });
 keyboardJS.bind('h + k+ f', (e) => {
-    // console.log('internal');
-    // window.location.href = "https://github.com/login/oauth/authorize?client_id=4edc3aed9d574399fce6";
-    // console.log(window.location.href)
     if(hiddenFlag){
         li = $('.hidden')
         i =0 ;
