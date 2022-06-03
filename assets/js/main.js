@@ -250,7 +250,7 @@ function updown(s) {
     page_name = page_name.split('#')
     page_name = page_name[page_name.length - 1]
     console.log(page_name)
-    pages = ['home', 'publication', 'education', 'awards', 'contact']
+    pages = ['home','news', 'publication', 'education', 'awards', 'contact']
     index = 0;
     for (i = 0; i < pages.length; i++) {
         tmp = pages[i];
@@ -265,7 +265,7 @@ function updown(s) {
     if (s == 'down') {
         index = index + 1;
     }
-    if (index >= 5) {
+    if (index >= pages.length) {
         index = index - 1;
     }
     if (index < 0) {

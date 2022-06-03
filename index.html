@@ -10,7 +10,8 @@
     <title>Kaifeng Huang - Home</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/main-test.css" />
+    <!-- CSS only -->
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-JGY03T9W52"></script>
@@ -30,10 +31,10 @@
 
     <!-- Wrapper-->
     <div id="wrapper">
-
         <!-- Nav -->
         <nav id="nav">
             <a href="#home" class="icon solid fa-home"><span>Home</span></a>
+            <a href="#news" class="icon solid fa-newspaper"><span>News</span></a>
             <a href="#publication" class="icon solid fa-book"><span>Publications</span></a>
             <a href="#education" class="icon solid fa-graduation-cap"><span>Education</span></a>
             <a href="#awards" class="icon solid fa-certificate"><span>Awards</span></a>
@@ -46,28 +47,93 @@
 
             <!-- Me -->
             <article id="home" class="panel intro">
+                <h1>Dr.Kaifeng Huang - 黄凯锋</h1>
+                <hr class="rounded">
                 <header>
-                    <h1>Kaifeng Huang - 黄凯锋</h1>
-                    <h5>Software Engineering</h5>
-                    <p><br>I am a postdoc at <a href="http://www.se.fudan.edu.cn/">Software Engineering Lab</a>, Fudan University. I got my PhD from Fudan University in 2022, supervised by <a href="https://cspengxin.github.io/">Xin Peng</a> and <a href="https://chenbihuan.github.io/">Bihuan Chen</a>.
-                        My research interest focuses on software analysis, OSS supply chain.
-                        <!-- <br> -->
+                    
+                    <h2>About Me</h2>
+                    <p>I am a postdoc at <a href="http://www.se.fudan.edu.cn/">Software Engineering Lab</a>, Fudan University. I got my PhD from Fudan University in 2022, supervised by <a href="https://cspengxin.github.io/">Xin Peng</a> and <a href="https://chenbihuan.github.io/">Bihuan Chen</a>.
+                        My research interests focus on software engineering, OSS supply chain and software evolution.
                 </header>
-                <a href="#publication" class="jumplink pic">
-                    <span class="arrow icon solid fa-chevron-right"><span>See my work</span></span>
-                    <!-- <img src="images/avatar.jpeg" alt="" /> -->
-                    <img class="avatar is-rounded is-256x256" src="images/avatar.jpeg" alt="[]">
+                
+                <div class="pic">
+                    <img class="avatar is-rounded is-188x188" src="images/avatar.jpeg" alt="[]">
+                </div>
+                
+                <hr class="rounded2">
+                <section >
+                    <h2 >Research Interests</h2>
+                    
+                    <h3 >OSS Supply Chain</h3>
+                    <p>Open Source Software has never been more popular over the past decade. The flourishing OSS community has advanced significantly on how we depend and develop software, making the process closely connected to <i>OSS Supply Chain</i>. Yet security, legal and maintenance risks persist and grow in <i>OSS Supply Chain</i>. Our mission is to access risks and provide mitigation on <i>OSS Supply Chain</i> from multiple dimensions (e.g., software lifecycle, programming language, application domain, etc).</p>
+
+                            
+                
+                    <h3 >OSS Software Evolution</h3>
+                    <p>Software evolves as new features being added, refactorings being adopted and defects being fixed. The downstream software consumers could not consistently be in sync with the upstream software providers as they release new versions, leading to fragmented version adoption. Our goal is to access the evolutionary pain it brings to downstream software and provide automatic techniques to ease that pain.</p><br><br>
+                            
+                  
+                    <a href="#news" class="jumplink">
+                        <span class="arrow icon solid fa-chevron-right"><span>See my work</span></span>
+                        
+                    </a>
+                </section>
+            </article>
+
+            <article id="news" class="panel">
+                <a href="#home">
+                    <span class="arrowl icon solid fa-chevron-left"><span></span></span>
+                </a>
+                <header>
+                    <h2>What's New</h2>
+                </header>
+                <hr class="rounded3">
+                <div class="row">
+                    <div class="content">
+                        <ul>
+                            <li>
+                                <p><span class="mydate"><strong>[2022.04]&nbsp;</strong></span>I was awarded the Outstanding Undergraduate of Fudan University.</p>
+                            </li>
+                            <li>
+                                <p><span class="mydate"><strong>[2022.02]&nbsp;</strong></span>Our paper "Characterizing Usages, Updates and Risks of Third-Party Libraries in Java Projects" is accepted by EMSE 2022.</p>
+                                <p></p>
+                            </li>
+                            <li>
+                                <p><span class="mydate"><strong>[2022.01]&nbsp;</strong></span>I joined Fudan University as a Postdoctoral Research Fellow.</p>
+                            </li>
+                            <li>
+                                <p><span class="mydate"><strong>[2021.12]&nbsp;</strong></span>I was honored to receive Fudan Super-PostDoctoral Fellowship.</p>
+                            </li>
+                            <li>
+                                <p><span class="mydate"><strong>[2021.12]&nbsp;</strong></span>I got my PhD from Fudan University. Thesis entitled "Third-Party Library Harmonization and Update Recommendation Based on API Analysis".</p>
+                            </li>
+                            <li>
+                                <p><span class="mydate"><strong>[2021.12]&nbsp;</strong></span>I was honored to give talks at "2021 CCF Chinasoft Open Source Symposium" and "2021 CCF Chinasoft Doctoral Symposium"</p>
+                                <p></p>
+                            </li>
+                            <li>
+                                <p><span class="mydate"><strong>[2021.07]&nbsp;</strong></span>Our paper "RepFinder: Finding Replacements for Missing APIs in Library Update" is accepted by ASE 2022.</p>
+                                <p></p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <a href="#publication">
+                    <span class="arrow icon solid fa-chevron-right"><span></span></span>
                 </a>
             </article>
+            
 
             <!-- Publication -->
             <article id="publication" class="panel">
-                <a href="#home">
+                <a href="#news">
                     <span class="arrowl icon solid fa-chevron-left"><span></span></span>
                 </a>
                 <header>
                     <h2>Publications</h2>
                 </header>
+                <hr class="rounded3">
                 <section>
                     <div class="content">
                         <!-- <hr> -->
@@ -131,35 +197,24 @@
                     <span class="arrowl icon solid fa-chevron-left"><span></span></span>
                 </a>
                 <header>
-                    <h2>Education</h2>
+                    <h2>Background</h2>
                 </header>
-
+                <hr class="rounded3">
                 <section>
                     <div class="row">
                         <div class="content">
-                            <!-- <hr> -->
                             <ul>
                                 <li>
-                                    <p><strong>Fudan University</strong>，Shanghai，PhD — Sept., 2016- Jan., 2022<br>Software Engineering, School of Computer Science</p>
+                                    <p><span class="mydate"><strong>PostDoc, Jan., 2022 - Now</strong></span><br>Software Engineering Lab, School of Computer Science, Fudan University, Shanghai.</p>
                                 </li>
                                 <li>
-                                    <p><strong>Donghua University</strong>，Shanghai，Bachelor — Sept., 2012- Jul., 2016<br>Electronics Engineering, School of Information Science and Technology</p>
+                                    <p><span class="mydate"><strong>PhD, Sept., 2016 - Jan., 2022</strong></span><br>Software Engineering Lab, School of Computer Science, Fudan University, Shanghai.</p>
+                                </li>
+                                <li>
+                                    <p><span class="mydate"><strong>B.Eng, Sept., 2012- Jul., 2016</strong></span><br>Electronics Engineering, School of Information Science and Technology, Donghua University, Shanghai</p>
                                 </li>
                             </ul>
                         </div>
-                        <!-- <div class="col-4 col-6-medium col-12-small">
-                            <a href="#" class="image fit"><img src="images/pic01.jpg" alt=""></a>
-                        </div>
-                        <div class="col-4 col-6-medium col-12-small">
-                            <a href="#" class="image fit"><img src="images/pic02.jpg" alt=""></a>
-                        </div>
-                        <div class="col-4 col-6-medium col-12-small">
-                            <a href="#" class="image fit"><img src="images/pic03.jpg" alt=""></a>
-                        </div>
-                        <div class="col-4 col-6-medium col-12-small">
-                            <a href="#" class="image fit"><img src="images/pic04.jpg" alt=""></a>
-                        </div> -->
-
                     </div>
                 </section>
                 <a href="#awards">
@@ -176,43 +231,26 @@
                 <header>
                     <h2>Awards</h2>
                 </header>
-
+                <hr class="rounded3">
                 <section>
                     <div class="content">
                         <!-- <hr> -->
                         <ul>
+                            <li>2022 Outstanding Undergraduate of Fudan University</li>
+                            <li>2022 Super-PostDoctoral Fellowship, Fudan University</li>
+                            <li>2021 Scholarship of Academic Excellence, Fudan University</li>
                             <li>2020 Scholarship of Academic Excellence, Fudan University</li>
+                            <li>2020 IEEE TCSE Distinguished Paper Award</li>
                             <li>2020 CCF Prototype Competition 2rd Prize</li>
                             <li>2019 Scholarship of Academic Excellence, Fudan University</li>
                             <li>2018 National Scholarship, Fudan University</li>
+                            <li>2018 ACM SIGSOFT Distinguished Paper Award</li>
                             <li>2018 CCF Prototype Competition 2rd Prize</li>
                             <li>2017 Scholarship of Academic Excellence, Fudan University</li>
                         </ul>
                     </div>
                 </section>
-                <!-- <section>
-                    <div class="row">
-                        <div class="col-4 col-6-medium col-12-small">
-                            <a href="#" class="image fit"><img src="images/pic01.jpg" alt=""></a>
-                        </div>
-                        <div class="col-4 col-6-medium col-12-small">
-                            <a href="#" class="image fit"><img src="images/pic02.jpg" alt=""></a>
-                        </div>
-                        <div class="col-4 col-6-medium col-12-small">
-                            <a href="#" class="image fit"><img src="images/pic03.jpg" alt=""></a>
-                        </div>
-
-                        <div class="col-4 col-6-medium col-12-small">
-                            <a href="#" class="image fit"><img src="images/pic10.jpg" alt=""></a>
-                        </div>
-                        <div class="col-4 col-6-medium col-12-small">
-                            <a href="#" class="image fit"><img src="images/pic11.jpg" alt=""></a>
-                        </div>
-                        <div class="col-4 col-6-medium col-12-small">
-                            <a href="#" class="image fit"><img src="images/pic12.jpg" alt=""></a>
-                        </div>
-                    </div>
-                </section> -->
+                
                 <a href="#contact">
                     <span class="arrow icon solid fa-chevron-right"><span></span></span>
                 </a>
@@ -226,21 +264,34 @@
                 <header>
                     <h2>Contact Me</h2>
                 </header>
+                <hr class="rounded3">
                 <form action="#" method="post">
                     <section>
                         <dl class="alt">
-                            <strong>Address:</strong>
-                            <br>
-                            <i class="fas fa-map-marker-alt mr-1"></i>&nbsp;&nbsp;2005 Songhu Road, Yangpu District, Shanghai, China
-                            <br><strong>Mail:</strong><br>
-                            <i class="far fa-envelope">&nbsp;&nbsp;kaifeng.h AT icloud.com</i>
+                            <!-- <img src="images/location.svg" style="width:50px;height:50px;" alt=""> -->
+                            <h2 >Address:</h2>
+                            2005 Songhu Road, Yangpu District, Shanghai, China
+             
+                            <!-- <img src="images/mail.svg" style="width:44px;height:44px;" alt=""> -->
+                            <h2>Mail:</h2>
+                            kaifeng.h AT icloud.com
                         </dl>
-                        <ul class="contact-icons color1">
-                            <!-- <li><a href="#" class="icon brands fa-twitter alt"><span class="label">Twitter</span></a></li> -->
-                            <!-- <li><a href="#" class="icon brands fa-envelope alt"><span class="label">Mail</span></a></li> -->
-                            <li><a href="https://github.com/kaifeng-h" class="icon brands fa-github alt"><span class="label">GitHub</span></a></li>
-                            <li><a href="https://scholar.google.com/citations?user=lrspoIAAAAAJ&hl=en" class="icon brands fa-google alt"><span class="label">Google Scholar</span></a></li>
-                        </ul>
+                        <dl class="contact-icons color1">
+                            <h2>Links:</h2>
+                            <ul class="contact-icons color1">
+                            <li >
+                                <a href="https://github.com/kaifeng-h"> <img  src="images/github.svg" style="width:44px;height:44px;" alt=""></a>
+                            </li>
+
+                            <li >
+                                <a href="https://scholar.google.com/citations?user=lrspoIAAAAAJ&hl=en&oi=ao"> <img src="images/scholar.svg" style="width:44px;height:44px;" alt=""></a>
+                            </li>
+                            <li >
+                                <a href="https://dblp.uni-trier.de/pid/225/0416.html"> <img src="images/dblp.svg" style="width:44px;height:44px;" alt=""></a>
+                            </li>
+                            </ul>
+                        </dl>
+                        
                     </section>
 
                     <!-- <div>
