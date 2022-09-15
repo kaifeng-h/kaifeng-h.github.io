@@ -1440,7 +1440,7 @@ header {
 
 header>p {
     margin: 0.5em 0 0 0;
-    color: #335;
+    color: #777777;
 }
 
 
@@ -2104,7 +2104,7 @@ img.is-rounded {
     margin: 0.25em 0 0 0;
     padding-left:25px;
     padding-right:15px;
-    color:#335;
+    color:#777777;
 }
 
 /* Rounded border */
@@ -2408,3 +2408,7 @@ ul.contact-icons.color4>li:before {
     padding-bottom: 0;
 }
 
+
+/* font-family: adobe-garamond-pro; */
+/* color: rgba(26,26,26,.7); */
+/* "proxima-nova" */
