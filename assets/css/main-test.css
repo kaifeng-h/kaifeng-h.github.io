@@ -2060,7 +2060,7 @@ img.is-rounded {
     padding-left:1.5em;
     padding-right:0em;
     margin-bottom: 0;
-    width: 650px;
+    width: min-content;
 }
 
 
@@ -2192,6 +2192,10 @@ h3 {
     margin-bottom: 0em;
 }
 
+#main>#news p {
+    font-size:13pt;
+}
+
 
 
 
@@ -2205,12 +2209,13 @@ h3 {
         height: auto;
     }
     #main>.panel.intro .pic {
-        height: 25em;
-        width: 100%;
+        height: 12em;
+        width: 30%;
     }
     #main>.panel.intro header {
-        padding: 4em;
+        /* padding: 4em; */
         text-align: left;
+        width:inherit;
     }
 }
 @media screen and (max-width: 736px) {
@@ -2230,7 +2235,7 @@ h3 {
         padding:0em;
         margin-bottom: 0;
         text-align:left;
-        width: 370px;
+        width: inherit;
         padding: 1em 1em 1em 1em;
     }
     #home > h1 {
