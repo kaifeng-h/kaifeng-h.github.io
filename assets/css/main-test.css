@@ -2181,7 +2181,7 @@ h3 {
 }
 
 #publication>section>div>ol>li>p>strong {
-    font-size: 13pt;
+    font-size: 12pt;
 }
 
 
@@ -2193,11 +2193,15 @@ h3 {
 }
 
 #main>#news p {
-    font-size:13pt;
+    font-size:11pt;
 }
 
 
 
+
+#news > div > div > ul {
+    line-height: 1.8;
+}
 
 
 @media screen and (max-width: 980px) {
@@ -2413,6 +2417,18 @@ ul.contact-icons.color4>li:before {
     padding-bottom: 0;
 }
 
+
+
+#contact > form > section > dl {
+    font-size: 13pt;
+}
+
+#service > section > div > ul {
+    font-size: 11pt;
+    line-height: 1.9;
+    padding-left: 2em;
+
+}
 
 /* font-family: adobe-garamond-pro; */
 /* color: rgba(26,26,26,.7); */
