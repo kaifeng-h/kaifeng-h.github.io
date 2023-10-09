@@ -7,6 +7,19 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
+:root {
+    --red: hsl(0, 78%, 62%);
+    --cyan: hsl(180, 62%, 55%);
+    --orange: hsl(34, 97%, 64%);
+    --blue: hsl(212, 86%, 64%);
+    --varyDarkBlue: hsl(234, 12%, 34%);
+    --grayishBlue: hsl(229, 6%, 66%);
+    --veryLightGray: hsl(0, 0%, 98%);
+    --weight1: 200;
+    --weight2: 400;
+    --weight3: 600;
+}
+
 html,
 body,
 div,
@@ -1320,6 +1333,10 @@ form {
     margin-bottom: 2em;
 }
 
+#contact>form>section>dl {
+    margin-bottom: 0em;
+}
+
 
 /* Table */
 
@@ -1423,13 +1440,7 @@ header {
 
 header>p {
     margin: 0.5em 0 0 0;
-    color: #335;
-}
-
-@media screen and (max-width: 736px) {
-    header {
-        margin: 0 0 1em 0;
-    }
+    color: #777777;
 }
 
 
@@ -1837,7 +1848,7 @@ body.is-preload #wrapper {
     position: relative;
     overflow: hidden;
     width: 100%;
-    background: #ffffff;
+    background: var(--veryLightGray);
     box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.25);
     -moz-transition: min-height 0.5s ease-in-out, max-height 0.5s ease-in-out;
     -webkit-transition: min-height 0.5s ease-in-out, max-height 0.5s ease-in-out;
@@ -1877,6 +1888,7 @@ body.is-preload #wrapper {
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
     flex-direction: row;
+    flex-wrap: wrap;
     -moz-align-items: center;
     -webkit-align-items: center;
     -ms-align-items: center;
@@ -1894,7 +1906,7 @@ body.is-preload #wrapper {
     -webkit-flex-shrink: 0;
     -ms-flex-shrink: 0;
     flex-shrink: 0;
-    width: 17em;
+    width: 12em;
     height: 100%;
 }
 
@@ -1912,6 +1924,11 @@ body.is-preload #wrapper {
 img.is-256x256 {
     height: 256px;
     width: 256px;
+}
+
+img.is-188x188 {
+    height: 188px;
+    width: 188px;
 }
 
 
@@ -2036,12 +2053,24 @@ img.is-rounded {
     -webkit-flex-shrink: 1;
     -ms-flex-shrink: 1;
     flex-shrink: 1;
-    padding: 3.5em 2.5em;
+    padding: 2em 2em;
+    padding-left: 1.5em;
+    padding-right: 0em;
     margin-bottom: 0;
+    width: min-content;
+}
+
+#home>h1 {
+    padding-top: 2em;
+    padding-left: 37px;
+    line-height: 1.25em;
+    margin-bottom: 0;
+    text-align: left;
     width: 100%;
 }
 
-#main>.panel.intro header h1 {
+#home>header>h2 {
+    padding-left: 15px;
     line-height: 1.25em;
     margin-bottom: 0;
 }
@@ -2050,6 +2079,110 @@ img.is-rounded {
     letter-spacing: -0.015em;
     font-size: 0.95em;
     margin: 0.25em 0 0 0;
+    padding-left: 25px;
+}
+
+#home>section {
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+}
+
+#home>section>h2 {
+    padding-left: 15px;
+    line-height: 1.25em;
+    margin-bottom: 0;
+}
+
+#home>section>h3 {
+    padding-top: 1em;
+    padding-left: 25px;
+}
+
+#home>section>p {
+    letter-spacing: -0.015em;
+    font-size: 0.95em;
+    margin: 0.25em 0 0 0;
+    padding-left: 25px;
+    padding-right: 15px;
+    color: #777777;
+}
+
+
+/* Rounded border */
+
+hr.rounded {
+    border-top: 4px solid #bbb;
+    border-radius: 5px;
+    width: 90%;
+    padding: 0;
+    margin: 1.5em 0 0 0;
+    margin-left: 40px;
+}
+
+hr.rounded2 {
+    border-top: 4px solid #bbb;
+    border-radius: 5px;
+    width: 90%;
+    padding: 0;
+    margin: 0 0 2em 0;
+    margin-left: 40px;
+}
+
+hr.rounded3 {
+    border-top: 4px solid #bbb;
+    border-radius: 5px;
+    width: 100%;
+    padding: 0;
+    margin: 1em 0 1em 0;
+    margin-left: 0;
+}
+
+h3 {
+    font-size: 0.95em;
+}
+
+.mydate {
+    color: #000;
+}
+
+
+/* 
+#home > section {
+    width:1200px;
+}
+#home > section > div {
+    padding:2.5em;
+} */
+
+#home>section>div>div>p>img {
+    float: right;
+    margin-right: 10px;
+}
+
+#contact>form>section>ul {
+    margin-left: 1em;
+}
+
+#contact>form>section>dl>h2 {}
+
+#contact>form>section>dl {
+    margin-left: 1em;
+}
+
+#contact>form>section>ul {
+    display: flex;
+}
+
+#contact>form>section>ul>li {
+    padding: 1em;
+}
+
+#publication>section>div>ol>li {
+    font-size: 11pt;
+}
+
+#publication>section>div>ol>li>p>strong {
+    font-size: 12pt;
 }
 
 
@@ -2061,6 +2194,14 @@ img.is-rounded {
     margin-bottom: 0em;
 }
 
+#main>#news p {
+    font-size: 11pt;
+}
+
+#news>div>div>ul {
+    line-height: 1.8;
+}
+
 @media screen and (max-width: 980px) {
     #main>.panel.intro {
         -moz-flex-direction: column;
@@ -2070,21 +2211,43 @@ img.is-rounded {
         height: auto;
     }
     #main>.panel.intro .pic {
-        height: 25em;
-        width: 100%;
+        height: 12em;
+        width: 30%;
     }
     #main>.panel.intro header {
-        padding: 4em;
-        text-align: center;
+        /* padding: 4em; */
+        text-align: left;
+        width: inherit;
     }
 }
 
 @media screen and (max-width: 736px) {
-    #main>.panel.intro .pic {
-        height: 20em;
+    #main>.panel {
+        padding: 2em 1.5em 1.5em 1.5em;
     }
     #main>.panel.intro header {
-        padding: 2.75em 2em 2.5em 2em;
+        -moz-flex-grow: 1;
+        -webkit-flex-grow: 1;
+        -ms-flex-grow: 1;
+        flex-grow: 1;
+        -moz-flex-shrink: 1;
+        -webkit-flex-shrink: 1;
+        -ms-flex-shrink: 1;
+        flex-shrink: 1;
+        padding: 0em;
+        margin-bottom: 0;
+        text-align: left;
+        width: inherit;
+        padding: 1em 1em 1em 1em;
+    }
+    #home>h1 {
+        padding-left: 10px;
+    }
+    header {
+        margin: 0 0 1em 0;
+    }
+    #main>.panel.intro .pic {
+        height: 13em;
     }
     #main>.panel.intro header p {
         font-size: 1em;
@@ -2093,6 +2256,17 @@ img.is-rounded {
     #main>.panel.intro .pic img {
         margin-left: auto;
         margin-right: auto;
+    }
+    hr.rounded {
+        margin-left: 0px;
+        margin: 1em 1em 0.5em 0;
+    }
+    hr.rounded2 {
+        margin-left: 0px;
+        margin: 0 1em 0.5em 0;
+    }
+    #home>section {
+        padding: 1em 1em 1em 1em
     }
 }
 
@@ -2143,6 +2317,15 @@ img.is-rounded {
         padding-left: 0.5em;
         margin-left: 0.5em;
     }
+}
+
+.box {
+    border-radius: 5px;
+    box-shadow: 0px 30px 40px -20px var(--grayishBlue);
+}
+
+#home>section>div>div>img {
+    float: right;
 }
 
 ul.contact-icons {
@@ -2198,18 +2381,31 @@ ul.contact-icons.color4>li:before {
     margin-left: 1em;
 }
 
-#contact>form>section>ul {
+#contact>form>section>dl.contact-icons.color1>ul {
     display: flex;
 }
 
-#contact>form>section>ul>li {
-    padding: 1em;
+#contact>form>section>dl.contact-icons.color1>ul>li {
+    padding: 0.7em;
+    padding-top: 0;
+    padding-bottom: 0;
 }
 
-#publication>section>div>ol>li {
-    font-size: 11pt;
-}
-
-#publication>section>div>ol>li>p>strong {
+#contact>form>section>dl {
     font-size: 13pt;
 }
+
+#service>section>div>ul {
+    font-size: 11pt;
+    line-height: 1.9;
+    padding-left: 2em;
+}
+
+
+/* font-family: adobe-garamond-pro; */
+
+
+/* color: rgba(26,26,26,.7); */
+
+
+/* "proxima-nova" */
