@@ -25,10 +25,13 @@ def xiaowang(x):
             newAus =  newAus + ' ' + auss2 +','
         author = newAus.replace('Kaifeng Huang','<u>Kaifeng Huang</u>')
         corresponding = data[4]
-        corrs2 = corresponding.strip(';').split(',')
-        corrs3 = corrs2[1].strip(' ') +" "+ corrs2[0].strip(' ')
-        author = author.replace(corrs3,corrs3 +"*")
-        author = author[0:-1]
+        for correspond_author in corresponding.split(';'):
+            if correspond_author == '':
+                continue
+            correspond_authors_name_a_b = correspond_author.strip(';').split(',')
+            correspond_authors_name_b_a_new_format = correspond_authors_name_a_b[1].strip(' ') +" "+ correspond_authors_name_a_b[0].strip(' ')
+            author = author.replace(correspond_authors_name_b_a_new_format,correspond_authors_name_b_a_new_format +"*")
+            author = author[0:-1]
         year = data[5]
         acroym = data[18]
         loc = data[21]
