@@ -1175,7 +1175,7 @@ html {
 }
 
 body {
-    background-image: url("images/overlay.png"), url("images/bg.jpg");
+    background-image: url("images/overlay.png"), url("images/bg.webp");
     /* background-repeat: repeat, no-repeat; */
     background-repeat: no-repeat;
     background-size: cover;
