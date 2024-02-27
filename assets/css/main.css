@@ -1950,6 +1950,22 @@ img.is-rounded {
     border-radius: 290486px;
 }
 
+#home>section>table>tbody>tr>td {
+    vertical-align: top;
+    text-align: left;
+}
+
+#home>section>table>tbody>tr>td>img {
+    vertical-align: top;
+    border-radius: 3px;
+    height: 120px;
+    width: 200px;
+}
+
+.table-height {
+    height: 300px;
+}
+
 #main>.panel.intro .pic img {
     position: relative;
     display: block;
