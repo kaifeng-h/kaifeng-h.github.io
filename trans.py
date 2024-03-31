@@ -49,7 +49,9 @@ def xiaowang(x):
     with open('index_template.html','r') as f:
         content = f.read()
     with open('index.html','w') as f:
-        newContent = content % s
+        # newContent = content % "aaa"
+        newContent = content.replace("PUBLICATION__CONTENT", s) 
+        # % s
         f.write(newContent)
 
     conn.close()
