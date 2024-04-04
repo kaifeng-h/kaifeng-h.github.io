@@ -2448,6 +2448,23 @@ a:visited {
     align-items: center;
 }
 
+.mydate {
+    display: inline-flex;
+    align-items: center;
+}
+
+.mydate img {
+    margin-right: 3px;
+    /* Adjust as needed */
+}
+
+
+/* #news>div>div>ul>li>p {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+} */
+
 @media screen and (max-width: 980px) {
     #main>.panel.intro {
         -moz-flex-direction: column;
