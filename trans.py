@@ -20,17 +20,25 @@ def xiaowang(x):
         for au in aus:
             if au == '':
                 continue
+            if not ' ' in au:
+                newAus =  newAus + ' ' + au +','
+                continue
             auss = au.strip(' ').split(',')
             auss2 = auss[1].strip(' ') +" "+ auss[0].strip(' ')
             newAus =  newAus + ' ' + auss2 +','
         author = newAus.replace('Kaifeng Huang','<u>Kaifeng Huang</u>')
+        author = author.replace('黄凯锋','<u>黄凯锋</u>')
         corresponding = data[4]
         for correspond_author in corresponding.split(';'):
             if correspond_author == '':
                 continue
             correspond_authors_name_a_b = correspond_author.strip(';').split(',')
-            correspond_authors_name_b_a_new_format = correspond_authors_name_a_b[1].strip(' ') +" "+ correspond_authors_name_a_b[0].strip(' ')
-            author = author.replace(correspond_authors_name_b_a_new_format,correspond_authors_name_b_a_new_format +"*")
+            if len(correspond_authors_name_a_b) == 1:
+                correspond_authors_name_b_a_new_format = correspond_authors_name_a_b[0]
+            else:
+                correspond_authors_name_b_a_new_format = correspond_authors_name_a_b[1].strip(' ') +" "+ correspond_authors_name_a_b[0].strip(' ')
+            # author = 
+            # author = author.replace(correspond_authors_name_b_a_new_format,correspond_authors_name_b_a_new_format +"*")
             author = author[0:-1]
         year = data[5]
         acroym = data[18]
