@@ -1,14 +1,29 @@
 import os
+import sqlite3
 
 def xiaowang(x):
     if x == "dahuang":
         print("爱你哦～")
     else:
         print("win nio~")
-
-    import sqlite3
-
     conn = sqlite3.connect('./src/info.sqlite')
+    with open('index_template.html','r') as f:
+        html = f.read()
+
+    pub = updatePub(conn)
+    news = updateNews(conn)
+
+    with open('index.html','w') as f:
+        newContent = html.replace("PUBLICATION__CONTENT", pub) #.replace("NEWS__CONTENT", pub)
+        f.write(newContent)
+
+    conn.close()
+
+def updateNews(conn):
+    return None
+    
+def updatePub(conn):
+    # conn = sqlite3.connect('./src/info.sqlite')
     c = conn.cursor()
     cursor = c.execute('select * from pubs order by "order" desc;')
     s = ''
@@ -54,15 +69,9 @@ def xiaowang(x):
             loc = loc +','
         template = f'<li><p><b><font size="3" color="#0b5394">[{acroym}]</font></b> <strong>{title}.</strong><br>{author}.<em>&nbsp;{source}, {loc} {page}, {year}.</em></p></li>'
         s = s + template + '\n'
-    with open('index_template.html','r') as f:
-        content = f.read()
-    with open('index.html','w') as f:
-        # newContent = content % "aaa"
-        newContent = content.replace("PUBLICATION__CONTENT", s) 
-        # % s
-        f.write(newContent)
+    
+    return s
 
-    conn.close()
 
 if __name__ == "__main__":
     xiaowang("dahuang")

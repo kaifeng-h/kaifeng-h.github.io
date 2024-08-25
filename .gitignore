@@ -5,3 +5,4 @@ private/
 src/local
 .DS_Store
 images/new.psd
+trans.py
