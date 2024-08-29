@@ -67,7 +67,14 @@ def updatePub(conn):
             loc = ''
         else:
             loc = loc +','
-        template = f'<li><p><b><font size="3" color="#0b5394">[{acroym}]</font></b> <strong>{title}.</strong><br>{author}.<em>&nbsp;{source}, {loc} {page}, {year}.</em></p></li>'
+        tcse = '<br><font size="3" color="#0b5394"> 🏆IEEE TCSE Distinguished Paper Award</font>'
+        sigsoft = '<br><font size="3" color="#0b5394">🏆ACM SIGSOFT Distinguished Paper Award</font>'
+        distinguishedpaper = ''
+        if acroym == "ASE'18":
+            distinguishedpaper = sigsoft
+        if acroym == "ICSME'20":
+            distinguishedpaper = tcse
+        template = f'<li><p><b><font size="3" color="#0b5394">[{acroym}]</font></b> <strong>{title}.</strong>{distinguishedpaper}<br>{author}.<em>&nbsp;{source}, {loc} {page}, {year}.</em></p></li>'
         s = s + template + '\n'
     
     return s
