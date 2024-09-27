@@ -1,4 +1,6 @@
-@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,300italic,400italic");
+/* comment to accelerate webpage load speed */
+/* @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,300italic,400italic"); */
+@import url('fonts.css');
 @import url("fontawesome-all.min.css");
 
 /*
