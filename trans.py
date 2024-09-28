@@ -60,7 +60,7 @@ def updatePub(conn):
         loc = data[21]
         page = data[9]
         if page == None:
-            page = 'to appear'
+            page = 'accepted'
         source = data[17]
         conforj = data[16]
         if conforj == 'J':
