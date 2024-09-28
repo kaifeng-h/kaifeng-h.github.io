@@ -1181,7 +1181,7 @@ html {
 }
 
 body {
-    background-image: url("https://gitee.com/kaifeng-huang/page/raw/main/assets/css/images/bg.jpg");
+    background-image: url("images/bg.jpg");
     /* background-repeat: repeat, no-repeat; */
     background-repeat: no-repeat;
     background-size: cover;
@@ -2493,9 +2493,19 @@ a:visited {
     #home>hr {
         visibility: hidden;
     }
+
+    body {
+        background-image: url("images/bg-mobile.jpg");
+    }
+
 }
 
 @media screen and (max-width: 736px) {
+
+    body {
+        background-image: url("images/bg-mobile.jpg");
+    }
+    
     #main>.panel {
         padding: 2em 1.5em 1.5em 1.5em;
     }
