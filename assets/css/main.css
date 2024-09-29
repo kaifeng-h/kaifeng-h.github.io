@@ -1181,7 +1181,8 @@ html {
 }
 
 body {
-    background-image: url("images/bg.jpg");
+    /* background-image: url("images/bg.jpg"); */
+    background-image: url("https://s1.imagehub.cc/images/2024/09/29/2103e4608e7b941b0a9c918b90cc18bb.jpg");
     /* background-repeat: repeat, no-repeat; */
     background-repeat: no-repeat;
     background-size: cover;
@@ -2495,7 +2496,9 @@ a:visited {
     }
 
     body {
-        background-image: url("images/bg-mobile2.jpg");
+        /* background-image: url("images/bg-mobile2.jpg"); */
+        background-image: url("https://s1.imagehub.cc/images/2024/09/29/2103e4608e7b941b0a9c918b90cc18bb.jpg");
+        
     }
 
 }
@@ -2503,7 +2506,8 @@ a:visited {
 @media screen and (max-width: 736px) {
 
     body {
-        background-image: url("images/bg-mobile2.jpg");
+        /* background-image: url("images/bg-mobile2.jpg"); */
+        background-image: url("https://s1.imagehub.cc/images/2024/09/29/2103e4608e7b941b0a9c918b90cc18bb.jpg");
     }
     
     #main>.panel {
