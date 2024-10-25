@@ -54,7 +54,9 @@ def updatePub(conn):
                 correspond_authors_name_b_a_new_format = correspond_authors_name_a_b[1].strip(' ') +" "+ correspond_authors_name_a_b[0].strip(' ')
             # author = 
             # author = author.replace(correspond_authors_name_b_a_new_format,correspond_authors_name_b_a_new_format +"*")
-            author = author[0:-1]
+            # print(author)
+        author = author[0:-1]
+        # print(author)
         year = data[5]
         acroym = data[18]
         loc = data[21]
