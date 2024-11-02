@@ -69,14 +69,22 @@ def updatePub(conn):
             loc = ''
         else:
             loc = loc +','
-        tcse = '<br><font size="3" color="#0b5394"> 🏆IEEE TCSE Distinguished Paper Award</font>'
-        sigsoft = '<br><font size="3" color="#0b5394">🏆ACM SIGSOFT Distinguished Paper Award</font>'
+
+        tcse ='<div id="distinguished"><font size="3" color="#0b5394">&nbsp;&nbsp;🏆IEEE TCSE Distinguished Paper Award&nbsp;&nbsp;</font></div>'
+        sigsoft = '<div id="distinguished"><font size="3" color="#0b5394">&nbsp;&nbsp;🏆ACM SIGSOFT Distinguished Paper Award&nbsp;&nbsp;</font></div>'
+        # tcse = '<br><font size="3" color="#0b5394"> 🏆IEEE TCSE Distinguished Paper Award</font>'
+        # sigsoft = '<br><font size="3" color="#0b5394">🏆ACM SIGSOFT Distinguished Paper Award</font>'
         distinguishedpaper = ''
         if acroym == "ASE'18":
             distinguishedpaper = sigsoft
         if acroym == "ICSME'20":
             distinguishedpaper = tcse
-        template = f'<li><p><b><font size="3" color="#0b5394">[{acroym}]</font></b> <strong>{title}.</strong>{distinguishedpaper}<br>{author}.<em>&nbsp;{source}, {loc} {page}, {year}.</em></p></li>'
+
+        pdf = ''
+        if data[28] != None:
+            pdf = '<a href="' +data[28]+'">[PDF]</a>'
+        # pdf= "[PDF]"
+        template = f'<li><p><b><font size="3" color="#0b5394">[{acroym}]</font></b> <strong>{title}. {pdf}</strong>{distinguishedpaper}<br>{author}.<em>&nbsp;{source}, {loc} {page}, {year}.</em></p></li>'
         s = s + template + '\n'
     
     return s
