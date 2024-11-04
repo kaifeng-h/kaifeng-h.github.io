@@ -2243,6 +2243,9 @@ h3 {
 #service>section>div>ul>li {
     font-size: 12pt;
 }
+#tools>section>div>ul>li {
+    font-size: 12pt;
+}
 
 #publication>section>div>ol>li>p>strong {
     font-size: 12pt;
@@ -2384,6 +2387,11 @@ ul.contact-icons.color4>li:before {
 }
 
 #service>section>div>ul {
+    font-size: 11pt;
+    line-height: 1.9;
+    padding-left: 2em;
+}
+#tools>section>div>ul {
     font-size: 11pt;
     line-height: 1.9;
     padding-left: 2em;
