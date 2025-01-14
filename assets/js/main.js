@@ -308,3 +308,18 @@ keyboardJS.bind('h + k+ f', (e) => {
 
 
 });
+
+
+
+const toggleButton = document.getElementById('toggleButton');
+const collapsibleList = document.getElementById('collapsibleList');
+
+toggleButton.addEventListener('click', () => {
+    const newItems = collapsibleList.querySelectorAll('.newsunshow');
+    console.log(newItems.length)
+    newItems.forEach(item => {
+        // item.style.removeProperty = "display";
+        item.classList.remove('newsunshow')
+    });
+    toggleButton.style.display = 'none'
+});

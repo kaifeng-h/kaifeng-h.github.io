@@ -2619,3 +2619,12 @@ a:visited {
 
 
 /* "proxima-nova" */
+
+
+.collapsible-content {
+    margin: 0;
+    padding: 0;
+}
+.newsunshow {
+    display: none;
+}
