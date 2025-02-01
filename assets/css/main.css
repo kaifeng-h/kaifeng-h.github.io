@@ -1183,7 +1183,8 @@ html {
 body {
     /* background-image: url("images/bg.jpg"); */
     /* background-image: url("https://s1.imagehub.cc/images/2024/09/29/2103e4608e7b941b0a9c918b90cc18bb.jpg"); */
-    background-image: url("https://i.postimg.cc/tg0mdPcw/bg.jpg");
+    /* background-image: url("https://i.postimg.cc/tg0mdPcw/bg.jpg"); */
+    background-image: url(./images/bg-small-50.jpg);
     /* background-repeat: repeat, no-repeat; */
     background-repeat: no-repeat;
     background-size: cover;
@@ -1191,6 +1192,46 @@ body {
     background-attachment: fixed;
     overflow-y: scroll;
 }
+/* 
+.blurred-img {
+    background-image: url(./images/bg-small.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.blurred-img img {
+    opacity: 0;
+    background-size: cover;
+    transition: opacity 250ms ease-in-out;
+}
+.blurred-img::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    animation: pulse 2.5s infinite;
+    background-color: white;
+}
+
+@keyframes pulse {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 0.1;
+    }
+    100% {
+      opacity: 0;
+    }
+}
+.blurred-img.loaded::before {
+    animation: none;
+    content: none;
+}
+.blurred-img.loaded img {
+    opacity: 1;
+} */
+
 
 body.is-preload *,
 body.is-preload *:before,

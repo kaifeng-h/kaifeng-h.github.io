@@ -24,11 +24,13 @@
     });
 
     // Play initial animations on page load.
-    $window.on('load', function() {
-        window.setTimeout(function() {
-            $body.removeClass('is-preload');
-        }, 100);
-    });
+    // $body.on('load', function() {
+    // $window.on('load', function() {
+    // console.log('sss')
+        // window.setTimeout(function() {
+            // $body.removeClass('is-preload');
+        // }, 100);
+    // });
 
     // Nav.
     $nav_links
@@ -86,7 +88,7 @@
 
         // Reset scroll.
         $window.scrollTop(0);
-
+        $body.removeClass('is-preload');
     })();
 
     // Hashchange event.
@@ -214,27 +216,7 @@
 })(jQuery);
 
 hiddenFlag = true;
-// url = window.location.href
-//     code = url.split('?')[1]
-//     code2 = code.split('=')[1]
-//     console.log(code2)
-//     if (code2 != null && code2.length == 20) {
-//         console.log('code success');
-//         data = {
-//                 "code": code2
-//             }
-//         $.ajax({
-//             type: 'POST',
-//             headers: { 'Access-Control-Allow-Origin': '*' },
-//             data: data,
-//             success: function(jsondata) {
-//                 console.log(jsondata);
-//             },
-//             dataType: 'json'
-//         });
-//     }
 
-// }
 
 keyboardJS.bind('home', (e) => {
     window.location.href = "#home";
@@ -323,3 +305,70 @@ toggleButton.addEventListener('click', () => {
     });
     toggleButton.style.display = 'none'
 });
+
+//  body fade
+// const observer = lozad(".lozad", {
+//     loaded: function (el) {
+//       el.classList.add("loaded");
+//       const blurImage = el.querySelector(".blur");
+//       if (blurImage) {
+//         blurImage.style.opacity = 0; // 隐藏模糊缩略图
+//       }
+//     },
+//   });
+// observer.observe();
+
+// const blurredImageDiv = document.querySelector(".blurred-img")
+// const img = blurredImageDiv.querySelector("img")
+// console.log("bbbb")
+
+// function loaded() {
+//     console.log("aaaa")
+//     blurredImageDiv.classList.add("loaded")
+// }
+
+// // if (img.complete) {
+// //   loaded()
+// // } else {
+// img.addEventListener("load", loaded)
+// // }
+
+
+// lazy load 
+const fullImage = new Image();
+fullImage.src = 'assets/css/images/bg.jpg';
+const thumbnail = document.querySelector('body')
+fullImage.onload = function() {
+    document.body.style.backgroundImage = `url('assets/css/images/bg.jpg')`;
+};
+fullImage.onerror = function() {
+    console.error('Failed to load the full-size image.');
+};
+
+const avatar = new Image()
+avatar.src = 'https://i.postimg.cc/Twt9sWkR/avatar.jpg'
+const thumbnailAvatar = document.querySelector('#home > div > img.avatar')
+avatar.onload = function (){
+    thumbnailAvatar.src = avatar.src;
+}
+
+const hl_vmud = new Image()
+hl_vmud.src = 'https://i.postimg.cc/jdL8GZ0B/highlights-vmud.png'
+const thumbnail1 = document.querySelector('#home > section:nth-child(6) > table > tbody > tr:nth-child(1) > td:nth-child(2) > img')
+hl_vmud.onload = function (){
+    thumbnail1.src = hl_vmud.src;
+}
+
+const hl_vision = new Image()
+hl_vision.src = 'https://i.postimg.cc/ncgdZBnr/highlights-vision.png'
+const thumbnail2 = document.querySelector('#home > section:nth-child(6) > table > tbody > tr:nth-child(2) > td:nth-child(2) > img')
+hl_vision.onload = function (){
+    thumbnail2.src = hl_vision.src;
+}
+
+const hl_1 = new Image()
+hl_1.src = 'https://i.postimg.cc/MZsPPg4y/hl1.png'
+const thumbnail3 = document.querySelector('#home > section:nth-child(6) > table > tbody > tr:nth-child(3) > td:nth-child(2) > img')
+hl_1.onload = function (){
+    thumbnail3.src = hl_1.src;
+}
