@@ -372,3 +372,21 @@ const thumbnail3 = document.querySelector('#home > section:nth-child(6) > table 
 hl_1.onload = function (){
     thumbnail3.src = hl_1.src;
 }
+
+const new_img = new Image()
+new_img.src = 'images/new2.gif'
+
+new_img.onload = function (){
+    const new_images = document.querySelectorAll('#collapsibleList > li > p:nth-child(1) > span > img')
+    new_images.forEach((image, index) => {
+    image.src = new_img.src;
+    });
+}
+
+const tongjimail = new Image()
+tongjimail.src = 'https://i.postimg.cc/CKHJj2kn/tongjimail.png'
+
+const mailEle = document.querySelector('#contact > form > section > dl:nth-child(2) > img')
+tongjimail.onload = function (){
+    mailEle.src = tongjimail.src;
+}
