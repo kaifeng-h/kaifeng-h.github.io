@@ -339,7 +339,7 @@ const fullImage = new Image();
 fullImage.src = 'assets/css/images/bg.jpg';
 const thumbnail = document.querySelector('body')
 fullImage.onload = function() {
-    document.body.style.backgroundImage = `url('assets/css/images/bg.jpg')`;
+    document.body.style.backgroundImage = `url('assets/css/images/bg2.jpg')`;
 };
 fullImage.onerror = function() {
     console.error('Failed to load the full-size image.');
