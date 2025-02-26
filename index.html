@@ -5,19 +5,23 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
-
-<head>
-    <title>Kaifeng Huang - Home</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <link rel="stylesheet" href="assets/css/main-min.css" />
-    <link rel="stylesheet" href="assets/css/fontawesome-all.min.css" />
-    <!-- CSS only -->
-    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JGY03T9W52"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
+ <head>
+  <title>
+   Kaifeng Huang - Home
+  </title>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1, user-scalable=no" name="viewport"/>
+  <link href="assets/css/main-min.css" rel="stylesheet"/>
+  <link href="assets/css/fontawesome-all.min.css" rel="stylesheet"/>
+  <!-- CSS only -->
+  <noscript>
+   <link href="assets/css/noscript.css" rel="stylesheet"/>
+  </noscript>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-JGY03T9W52">
+  </script>
+  <script>
+   window.dataLayer = window.dataLayer || [];
 
         function gtag() {
             dataLayer.push(arguments);
@@ -25,136 +29,243 @@
         gtag('js', new Date());
 
         gtag('config', 'G-JGY03T9W52');
-    </script>
-</head>
-
-<body class="is-preload">
-
-    <!-- Wrapper-->
-    <div id="wrapper">
-        <!-- Nav -->
-        <nav id="nav">
-            <a href="#home" class="icon solid fa-home"><span>Home</span></a>
-            <a href="#news" class="icon solid fa-bullhorn"><span>News</span></a>
-            <a href="#publication" class="icon solid fa-book"><span>Publications</span></a>
-            <a href="#tools" class="icon solid fa-wrench"><span>Tools</span></a>
-            <a href="#service" class="icon solid fa-share-alt"><span>Service</span></a>
-            <a href="#contact" class="icon solid fa-comments"><span>Contacts</span></a>
-            <!-- <a href="https://twitter.com/ajlkn" class="icon brands fa-twitter"><span>Twitter</span></a> -->
-        </nav>
-        <!-- Main -->
-        <div id="main">
-
-            <!-- Me -->
-            <article id="home" class="panel intro">
-                <h1>Kaifeng Huang - 黄凯锋</h1>
-                <hr class="rounded">
-                <header>
-
-                    <!-- <h2>About</h2> -->
-                    <p>Kaifeng Huang is an Assistant Professor (tenure-track) at School of Computer Science and Technology, Tongji University. Prior to that, he was a research fellow at Software Engineering Lab, Fudan University. He obtained his PhD from Fudan University
-                        in 2022, supervised by <a href="https://cspengxin.github.io/">Prof. Xin Peng</a> and <a href="https://chenbihuan.github.io/">Prof. Bihuan Chen</a>.
-                    </p>
-                    <p>
-                        His research interests focus on open source software supply chain, software security and software evolution. He serves in the reviewer panels and program committees of IEEE Transactions on Software Engineering, ACM Transactions on Software Engineering and Methodology, Journal of Systems & Software, ASE 2024, ISSRE 2024, ICSE AE 2023, etc. He was the awardee of the ACM SIGSOFT Distinguished Paper Award at ASE 2018 and IEEE TCSE Distinguished Paper Award at ICSME 2020.
-
-                        <!-- He has published ten peer-reviewed papers at top journals/conferences including ICSE, ESEC/FSE, ASE, EMSE, etc. -->
-                    </p>
-                </header>
-
-
-                <div class="pic">
-                    <img class="avatar is-rounded is-188x188" src="images/avatar-small.jpg" alt="[]">
-                    <!-- <img class="avatar is-rounded is-188x188" src="https://s1.imagehub.cc/images/2024/09/29/81afdbe04a0818c553a4a5348e6f5ce8.jpeg" alt="[]"> -->
-                    <!-- <img class="avatar is-rounded is-188x188" src="images/avatar.jpeg" alt="[]"> -->
-                </div>
-
-                <section>
-                    <h2>Research Interests</h2>
-                    <!-- <hr class="rounded2"> -->
-                    <div class="row">
-                        <ul>
-                            <li>
-                                <p><strong>Software&AI Supply Chain.&nbsp;</strong></span> Software and AI systems are inherently complex. Achieving a clear assessment of <i>security, maintenance, and legal risks</i> in <i>the software and AI supply chain</i>, along with developing <i>effective mitigation strategies</i>, remains a significant challenge. Our mission is to simplify this process by providing comprehensive evaluations and actionable solutions that enhance security and compliance throughout the lifecycle of software and AI systems.
-                                <p></p>
-                            </li>
-
-                            <li>
-                                <p>
-                                    <strong>Software Security.&nbsp;</strong>
-                                    </span>The software system is vulnerable to security issues. We are interested in but not limited to topics such as software <i>vulnerability detection/assessment/mitigation</i>, <i>malicious software/AIWare/LLMWare detection</i>, and <i>privacy protection</i>. Our goal is to identify potential security risks and prevent the leakage of sensitive privacy information (e.g., LLM privacy).</p>
-                            </li>
-                            <li>
-                                <p>
-                                    <strong>Software Evolution.&nbsp;</strong>
-                                    </span>The software evolves constantly, leading to issues like <i>version fragmentation</i>, <i>API incompatibility</i>, <i>API deprecation</i>, and <i>merge conflict</i>. Our goal is to assess the challenges this evolution presents to downstream software and provide automated techniques to alleviate these issues.</p>
-                            </li>
-                        </ul>
-                    </div>
-                    <a href="#news" class="jumplink">
-                        <span class="arrow icon solid fa-chevron-right"><span>See my work</span></span>
-
-                    </a>
-                </section>
-
-                <section>
-                    <h2>Highlights</h2>
-                    <table class="table-height">
-                        <tbody>
-                            <tr>
-                                <td width="70%">
-                                    <strong>VMUD: Detecting Recurring Vulnerabilities with Multiple Fixing Functions via Function Selection and Semantic Equivalent Statement Matching.</strong>&nbsp;<u>Kaifeng Huang</u>, Chenhao Lu, Yiheng Cao, Bihuan Chen, Xin Peng.&nbsp; <em>In Proceedings of the 31th ACM Conference on Computer and Communications Security, Salt Lake City, United States, accepted, 2024.</em>
-                                    <br>
-                                    <!-- <div>
+  </script>
+ </head>
+ <body class="is-preload">
+  <!-- Wrapper-->
+  <div id="wrapper">
+   <!-- Nav -->
+   <nav id="nav">
+    <a class="icon solid fa-home" href="#home">
+     <span>
+      Home
+     </span>
+    </a>
+    <a class="icon solid fa-bullhorn" href="#news">
+     <span>
+      News
+     </span>
+    </a>
+    <a class="icon solid fa-book" href="#publication">
+     <span>
+      Publications
+     </span>
+    </a>
+    <a class="icon solid fa-wrench" href="#tools">
+     <span>
+      Tools
+     </span>
+    </a>
+    <a class="icon solid fa-share-alt" href="#service">
+     <span>
+      Service
+     </span>
+    </a>
+    <a class="icon solid fa-comments" href="#contact">
+     <span>
+      Contacts
+     </span>
+    </a>
+    <!-- <a href="https://twitter.com/ajlkn" class="icon brands fa-twitter"><span>Twitter</span></a> -->
+   </nav>
+   <!-- Main -->
+   <div id="main">
+    <!-- Me -->
+    <article class="panel intro" id="home">
+     <h1>
+      Kaifeng Huang - 黄凯锋
+     </h1>
+     <hr class="rounded"/>
+     <header>
+      <!-- <h2>About</h2> -->
+      <p>
+       Kaifeng Huang is an Assistant Professor (tenure-track) at School of Computer Science and Technology, Tongji University. Prior to that, he was a research fellow at Software Engineering Lab, Fudan University. He obtained his PhD from Fudan University
+                        in 2022, supervised by
+       <a href="https://cspengxin.github.io/">
+        Prof. Xin Peng
+       </a>
+       and
+       <a href="https://chenbihuan.github.io/">
+        Prof. Bihuan Chen
+       </a>
+       .
+      </p>
+      <p>
+       His research interests focus on open source software supply chain, software security and software evolution. He serves in the reviewer panels and program committees of IEEE Transactions on Software Engineering, ACM Transactions on Software Engineering and Methodology, Journal of Systems &amp; Software, ASE 2024, ISSRE 2024, ICSE AE 2023, etc. He was the awardee of the ACM SIGSOFT Distinguished Paper Award at ASE 2018 and IEEE TCSE Distinguished Paper Award at ICSME 2020.
+       <!-- He has published ten peer-reviewed papers at top journals/conferences including ICSE, ESEC/FSE, ASE, EMSE, etc. -->
+      </p>
+     </header>
+     <div class="pic">
+      <img alt="[]" class="avatar is-rounded is-188x188" src="images/avatar-small.jpg"/>
+      <!-- <img class="avatar is-rounded is-188x188" src="https://s1.imagehub.cc/images/2024/09/29/81afdbe04a0818c553a4a5348e6f5ce8.jpeg" alt="[]"> -->
+      <!-- <img class="avatar is-rounded is-188x188" src="images/avatar.jpeg" alt="[]"> -->
+     </div>
+     <section>
+      <h2>
+       Research Interests
+      </h2>
+      <!-- <hr class="rounded2"> -->
+      <div class="row">
+       <ul>
+        <li>
+         <p>
+          <strong>
+           Software&amp;AI Supply Chain.
+          </strong>
+          Software and AI systems are inherently complex. Achieving a clear assessment of
+          <i>
+           security, maintenance, and legal risks
+          </i>
+          in
+          <i>
+           the software and AI supply chain
+          </i>
+          , along with developing
+          <i>
+           effective mitigation strategies
+          </i>
+          , remains a significant challenge. Our mission is to simplify this process by providing comprehensive evaluations and actionable solutions that enhance security and compliance throughout the lifecycle of software and AI systems.
+          <p>
+          </p>
+         </p>
+        </li>
+        <li>
+         <p>
+          <strong>
+           Software Security.
+          </strong>
+          The software system is vulnerable to security issues. We are interested in but not limited to topics such as software
+          <i>
+           vulnerability detection/assessment/mitigation
+          </i>
+          ,
+          <i>
+           malicious software/AIWare/LLMWare detection
+          </i>
+          , and
+          <i>
+           privacy protection
+          </i>
+          . Our goal is to identify potential security risks and prevent the leakage of sensitive privacy information (e.g., LLM privacy).
+         </p>
+        </li>
+        <li>
+         <p>
+          <strong>
+           Software Evolution.
+          </strong>
+          The software evolves constantly, leading to issues like
+          <i>
+           version fragmentation
+          </i>
+          ,
+          <i>
+           API incompatibility
+          </i>
+          ,
+          <i>
+           API deprecation
+          </i>
+          , and
+          <i>
+           merge conflict
+          </i>
+          . Our goal is to assess the challenges this evolution presents to downstream software and provide automated techniques to alleviate these issues.
+         </p>
+        </li>
+       </ul>
+      </div>
+      <a class="jumplink" href="#news">
+       <span class="arrow icon solid fa-chevron-right">
+        <span>
+         See my work
+        </span>
+       </span>
+      </a>
+     </section>
+     <section>
+      <h2>
+       Highlights
+      </h2>
+      <table class="table-height">
+       <tbody>
+        <tr>
+         <td width="70%">
+          <strong>
+           VMUD: Detecting Recurring Vulnerabilities with Multiple Fixing Functions via Function Selection and Semantic Equivalent Statement Matching.
+          </strong>
+          <u>
+           Kaifeng Huang
+          </u>
+          , Chenhao Lu, Yiheng Cao, Bihuan Chen, Xin Peng.
+          <em>
+           In Proceedings of the 31th ACM Conference on Computer and Communications Security, Salt Lake City, United States, accepted, 2024.
+          </em>
+          <br/>
+          <!-- <div>
                                         <button type="button" class="btn btn-outline-dark">PDF</button>
                                         <button type="button" class="btn btn-outline-dark">BIB</button>
                                     </div> -->
-                                </td>
-                                <td width="30%">
-                                    
-                                    <img src="images/highlights/highlights-vmud-small.png" alt="highlights vmud">
-                                    <!-- <img src="https://s1.imagehub.cc/images/2024/09/29/d528c408f919219807720bc4dd882970.png" alt="highlights vmud"> -->
-                                    <!-- <img src="images/highlights/highlights-vmud.png" alt="alt "> -->
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td width="70%">
-                                    <strong>Vision: Identifying Affected Library Versions for Open Source Software Vulnerabilities.</strong>&nbsp;
-                                    Susheng Wu, Ruisi Wang,  <u>Kaifeng Huang</u>, Yiheng Cao, Wenyan Song, Zhuotong Zhou, Yiheng Huang, Bihuan Chen, Xin Peng. 
-                                    &nbsp; <em>In Proceedings of the 39th IEEE/ACM International Conference on Automated Software Engineering, Sacramento, California, United States, pp. 1447-1459, 2024.</em>
-                                    <br>
-                                    <!-- <div>
+         </td>
+         <td width="30%">
+          <img alt="highlights vmud" src="images/highlights/highlights-vmud-small.png"/>
+          <!-- <img src="https://s1.imagehub.cc/images/2024/09/29/d528c408f919219807720bc4dd882970.png" alt="highlights vmud"> -->
+          <!-- <img src="images/highlights/highlights-vmud.png" alt="alt "> -->
+         </td>
+        </tr>
+        <tr>
+         <td width="70%">
+          <strong>
+           Vision: Identifying Affected Library Versions for Open Source Software Vulnerabilities.
+          </strong>
+          Susheng Wu, Ruisi Wang,
+          <u>
+           Kaifeng Huang
+          </u>
+          , Yiheng Cao, Wenyan Song, Zhuotong Zhou, Yiheng Huang, Bihuan Chen, Xin Peng.
+          <em>
+           In Proceedings of the 39th IEEE/ACM International Conference on Automated Software Engineering, Sacramento, California, United States, pp. 1447-1459, 2024.
+          </em>
+          <br/>
+          <!-- <div>
                                         <button type="button" class="btn btn-outline-dark">PDF</button>
                                         <button type="button" class="btn btn-outline-dark">BIB</button>
                                     </div> -->
-                                </td>
-                                <td width="30%">
-                                    <img src="images/highlights/highlights-vision-small.png" alt="highlights vision">
-                                    <!-- <img src="https://s1.imagehub.cc/images/2024/09/29/dd281048c6aaa3bb781ceba568e4571e.png" alt="highlights vision"> -->
-                                    <!-- <img src="images/highlights/highlights-vision.png" alt="alt "> -->
-                                    <!-- <img src="images/highlights/highlights-vision.png" alt="alt "> -->
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td width="70%">
-                                    <strong>Identifying Affected Libraries and Their Ecosystems for Open Source Software Vulnerabilities.</strong>&nbsp;Susheng Wu, Wenyan Song, <u>Kaifeng Huang</u>, Bihuan Chen, Xin Pen.&nbsp; <em>In Proceedings of the 46th
-                                    IEEE/ACM International Conference on Software Engineering (ICSE), Lisbon, Portugal, pp. 162: 1-12, 2024.</em>
-                                    <br>
-                                    <!-- <div>
+         </td>
+         <td width="30%">
+          <img alt="highlights vision" src="images/highlights/highlights-vision-small.png"/>
+          <!-- <img src="https://s1.imagehub.cc/images/2024/09/29/dd281048c6aaa3bb781ceba568e4571e.png" alt="highlights vision"> -->
+          <!-- <img src="images/highlights/highlights-vision.png" alt="alt "> -->
+          <!-- <img src="images/highlights/highlights-vision.png" alt="alt "> -->
+         </td>
+        </tr>
+        <tr>
+         <td width="70%">
+          <strong>
+           Identifying Affected Libraries and Their Ecosystems for Open Source Software Vulnerabilities.
+          </strong>
+          Susheng Wu, Wenyan Song,
+          <u>
+           Kaifeng Huang
+          </u>
+          , Bihuan Chen, Xin Pen.
+          <em>
+           In Proceedings of the 46th
+                                    IEEE/ACM International Conference on Software Engineering (ICSE), Lisbon, Portugal, pp. 162: 1-12, 2024.
+          </em>
+          <br/>
+          <!-- <div>
                                         <button type="button" class="btn btn-outline-dark">PDF</button>
                                         <button type="button" class="btn btn-outline-dark">BIB</button>
                                     </div> -->
-                                </td>
-                                <td width="30%">
-                                    
-                                    <!-- <img src="https://s1.imagehub.cc/images/2024/09/29/9b0c6fcf8f34bda3c879584212b4c123.png" alt="hl1"> -->
-                                    <img src="images/highlights/hl1-small.png" alt="hl1">
-                                    <!-- <img src="images/highlights/hl1.png" alt="alt "> -->
-                                </td>
-                            </tr>
-                            <!-- <tr>
+         </td>
+         <td width="30%">
+          <!-- <img src="https://s1.imagehub.cc/images/2024/09/29/9b0c6fcf8f34bda3c879584212b4c123.png" alt="hl1"> -->
+          <img alt="hl1" src="images/highlights/hl1-small.png"/>
+          <!-- <img src="images/highlights/hl1.png" alt="alt "> -->
+         </td>
+        </tr>
+        <!-- <tr>
 
                                 <td width="70%">
                                     <strong>Demystifying Dependency Bugs in Deep Learning Stack.&nbsp;</strong><u>Kaifeng Huang</u>, Bihuan Chen, Susheng Wu, Junmin Cao, Lei Ma, Xin Peng.&nbsp; <em>In Proceedings of the 31st ACM Joint European Software Engineering
@@ -166,178 +277,514 @@
                                     <img src="images/highlights/hl2.png" alt="alt ">
                                 </td>
                             </tr> -->
-
-                        </tbody>
-                    </table>
-                </section>
-            </article>
-            <!--------------------------News----------------------------------------------------------------------------------------->
-            <article id="news" class="panel">
-                <a href="#home">
-                    <span class="arrowl icon solid fa-chevron-left"><span></span></span>
-                </a>
-                <header>
-                    <h2>What's New?</h2>
-                </header>
-                <hr class="rounded3">
-                <div class="row">
-                    <div class="content">
-                        <ul id="collapsibleList" class="collapsible-content">
-                            <li>
-                                <p><span class="mydate"><strong>[2025.01]&nbsp;</strong><img src="images/new2-static.gif" style="width:35px;height:35px;" alt=""></span>Our paper titled "LLMs Meet Library Evolution: Evaluating Deprecated API Usage in LLM-based Code Completion" is accepted by <a href="https://conf.researchr.org/track/icse-2025/icse-2025-research-track">ICSE 2025</a>.
-                                </p>
-                                <p></p>
-                            </li>
-
-                            <li>
-                                <p><span class="mydate"><strong>[2025.01]&nbsp;</strong><img src="images/new2-static.gif" style="width:35px;height:35px;" alt=""></span>
-                                    I was honored to serve as a reviewer for the <a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=10206">Transactions on Information Forensics & Security</a>.</p>
-                                <p></p>
-                            </li>
-
-                            <li>
-                                <p><span class="mydate"><strong>[2024.10]&nbsp;</strong><img src="images/new2-static.gif" style="width:35px;height:35px;" alt=""></span>Our paper titled "Killing Two Birds with One Stone: Malicious Package Detection in NPM and PyPI using a Single Model of Malicious Behavior Sequence" is accepted by <a href="https://dl.acm.org/journal/tosem">ACM Transactions on Software Engineering and Methodology</a>.
-                                </p>
-                                <p></p>
-                            </li>
-
-                            <li>
-                                <p><span class="mydate"><strong>[2024.08]&nbsp;</strong><img src="images/new2-static.gif" style="width:35px;height:35px;" alt=""></span>Our paper titled "VMUD: Detecting Recurring Vulnerabilities with Multiple Fixing Functions via Function Selection and Semantic Equivalent Statement Matching" is accepted by <a href="https://www.sigsac.org/ccs/CCS2024/call-for/call-for-papers.html">CCS 2024</a>.
-                                </p>
-                                <p></p>
-                            </li>
-
-                            <li>
-                                <p><span class="mydate"><strong>[2024.08]&nbsp;</strong><img src="images/new2-static.gif" style="width:35px;height:35px;" alt=""></span>Our paper titled "Vision: Identifying Affected Library Versions for Open Source Software Vulnerabilities" is accepted by <a href="https://conf.researchr.org/home/ase-2024">ASE 2024</a>.
-                                </p>
-                                <p></p>
-                            </li>
-
-                            <li>
-                                <!-- <p><span class="mydate"><strong>[2024.08]&nbsp;</strong><img src="images/new2.gif" style="width:35px;height:35px;" alt=""></span>Our paper titled "1+1>2: Integrating Deep Code Behaviors with Metadata Features for Malicious PyPI Package Detection" is accepted by <a href="https://conf.researchr.org/home/ase-2024">ASE 2024</a>. -->
-                                    <p><span class="mydate"><strong>[2024.08]&nbsp;</strong><img src="images/new2-static.gif" style="width:35px;height:35px;" alt=""></span>Our paper titled "1+1>2: Integrating Deep Code Behaviors with Metadata Features for Malicious PyPI Package Detection" is accepted by <a href="https://conf.researchr.org/home/ase-2024">ASE 2024</a>.
-                                    </p>
-                                <p></p>
-                            </li>
-
-                            <li>
-                                <p><span class="mydate"><strong>[2024.07]&nbsp;</strong><img src="images/new2-static.gif" style="width:35px;height:35px;" alt=""></span>Our paper titled "Your "Notice" is Missing: Detecting and Fixing Violations of Modification Terms
-                                    in Open Source Licenses during Forking" is accepted by <a href="https://2024.issta.org/track/issta-2024-papers">ISSTA 2024</a>.
-                                </p>
-                                <p></p>
-                            </li>
-                            <li>
-                                <p><span class="mydate"><strong>[2024.05]&nbsp;</strong></span>Our paper titled "Detecting Incompatible Third-Party Library APIs in Python Based on Static Analysis"
-                                    is accepted by <a href="http://www.jos.org.cn">JOS</a>.
-                                </p>
-                                <p></p>
-                            </li>
-                            <li>
-                                <p><span class="mydate"><strong>[2024.03]&nbsp;</strong></span>I was invited to serve on the program committee of the Research Track at <a href="https://2024.aiwareconf.org/track/aiware-2024-challenge-track ">AIWare 2024 Challenge Track</a>.</p>
-                                <p></p>
-                            </li>
-                            <li>
-                                <p><span class="mydate"><strong>[2024.03]&nbsp;</strong></span>I was invited to serve on the program committee of the Research Track at <a href="https://issre.github.io/2024/">ISSRE 2024</a>.</p>
-                                <p></p>
-                            </li>
-                            <li>
-                                <p><span class="mydate"><strong>[2024.02]&nbsp;</strong></span>I have joined <a href="https://en.tongji.edu.cn/p/#/">Tongji University</a> as an Assitant Professor!</p>
-                                <p></p>
-                            </li>
-
-                            <li>
-                                <p><span class="mydate"><strong>[2023.12]&nbsp;</strong></span>Our paper titled "Enhancing Field Tracking and Interprocedural Analysis to Find More Null Pointer
-                                    Exceptions" is accepted by <a href="https://conf.researchr.org/home/saner-2024">SANER 2024</a>.
-                                </p>
-                                <p></p>
-                            </li>
-                            <li>
-                                <p><span class="mydate"><strong>[2023.12]&nbsp;</strong></span>Our paper titled "Identifying Affected Libraries and Their Ecosystems for Open Source Software
-                                    Vulnerabilities" is accepted by <a href="https://conf.researchr.org/home/icse-2024">ICSE 2024</a>.</p>
-                                <p></p>
-                            </li>
-                            <li>
-                                <p><span class="mydate"><strong>[2023.12]&nbsp;</strong></span>I was invited to serve on the program committee of the Research Track at <a href="https://conf.researchr.org/home/ase-2024">ASE 2024</a>.</p>
-                                <p></p>
-                            </li>
-                            <li>
-                                <p><span class="mydate"><strong>[2023.07]&nbsp;</strong></span>One paper titled "Demystifying Dependency Bugs in Deep Learning Stack" is accepted by <a href="https://conf.researchr.org/home/fse-2023">ESEC/FSE 2023</a>.</p>
-                                <p></p>
-                            </li>
-                            <li id="toggleButton" style="cursor: pointer;"><u>More</u></li>
-                            <li class="newsunshow">
-                                <p><span class="mydate"><strong>[2023.06]&nbsp;</strong></span>I was invited to serve on the program committee of the Artifact Evaluation Track at <a href="">ESEC/FSE 2023</a>.</p>
-                                <p></p>
-                            </li>
-                            
-
-                            <li class="newsunshow">
-                                <p><span class="mydate"><strong>[2023.06]&nbsp;</strong></span>One paper titled "Characterizing the Complexity and Its Impact on Testing in ML-Enabled Systems - A Case Study on Rasa" is accepted by <a href="">ICSME 2023</a>.</p>
-                                <p></p>
-                            </li>
-
-                            <li class="newsunshow">
-                                <p><span class="mydate"><strong>[2022.09]&nbsp;</strong></span>I was invited to serve on the program committee of the Artifact Evaluation Track at <a href="">ICSE 2023</a>.</p>
-                                <p></p>
-                            </li>
-                            <li class="newsunshow">
-                                <p><span class="mydate"><strong>[2022.08]&nbsp;</strong></span>I was invited to serve on the program committee of Tool Demo Track at <a href="">SANER 2023</a>.</p>
-                                <p></p>
-                            </li>
-                            <li class="newsunshow">
-                                <p><span class="mydate"><strong>[2022.06]&nbsp;</strong></span>One paper titled "Tracking Patches for Open Source Software Vulnerabilities" is accepted by <a href="">ESEC/FSE 2022</a>.</p>
-                                <p></p>
-                            </li>
-                            <li class="newsunshow">
-                                <p><span class="mydate"><strong>[2022.04]&nbsp;</strong></span>I was awarded the Outstanding Graduate of Fudan University.</p>
-                            </li>
-                            
-
-                            <li class="newsunshow">
-                                <p><span class="mydate"><strong>[2022.02]&nbsp;</strong></span>One paper titled "Characterizing Usages, Updates and Risks of Third-Party Libraries in Java Projects" is accepted by <a href="">EMSE 2022</a>.</p>
-                                <p></p>
-                            </li>
-                            <li class="newsunshow">
-                                <p><span class="mydate"><strong>[2022.01]&nbsp;</strong></span>I joined Fudan University as a Postdoctoral Research Fellow.</p>
-                            </li>
-                            <li class="newsunshow">
-                                <p><span class="mydate"><strong>[2021.12]&nbsp;</strong></span>I was honored to receive Fudan Super-PostDoctoral Fellowship.</p>
-                            </li>
-                            <li class="newsunshow">
-                                <p><span class="mydate"><strong>[2021.12]&nbsp;</strong></span>I got my PhD from Fudan University. Thesis entitled "Third-Party Library Harmonization and Update Recommendation Based on API Analysis".</p>
-                            </li>
-                            <li class="newsunshow">
-                                <p><span class="mydate"><strong>[2021.12]&nbsp;</strong></span>I was honored to give talks at "<a href="">2021 CCF Chinasoft</a> Open Source Symposium" and "2021 CCF Chinasoft Doctoral Symposium"</p>
-                                <p></p>
-                            </li>
-                            <li class="newsunshow">
-                                <p><span class="mydate"><strong>[2021.07]&nbsp;</strong></span>One paper titled "RepFinder: Finding Replacements for Missing APIs in Library Update" is accepted by <a href="">ASE 2021</a>.</p>
-                                <p></p>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-                <a href="#publication">
-                    <span class="arrow icon solid fa-chevron-right"><span></span></span>
-                </a>
-            </article>
-
-
-            <!------------------------------------- Publication ----------------------------------------------------------------------->
-            <article id="publication" class="panel">
-                <a href="#news">
-                    <span class="arrowl icon solid fa-chevron-left"><span></span></span>
-                </a>
-                <header>
-                    <h2>Publications</h2>
-                </header>
-                <hr class="rounded3">
-                <section>
-                    <div class="content">
-                        <!-- <hr> -->
-                        <ol>
-                            <li><p><b><font size="3" color="#0b5394">[ICSE'25]</font></b> <strong>LLMs Meet Library Evolution: Evaluating Deprecated API Usage in LLM-based Code Completion. </strong><br> Chong Wang, <u>Kaifeng Huang</u>, Jian Zhang, Yibo Feng, Lyuye Zhang, Yang Liu, Peng Xin.<em>&nbsp;In Proceedings of the 47th IEEE/ACM International Conference on Software Engineering, Ottawa, Ontario, Canada, accepted, 2025.</em></p></li>
+       </tbody>
+      </table>
+     </section>
+    </article>
+    <!--------------------------News----------------------------------------------------------------------------------------->
+    <article class="panel" id="news">
+     <a href="#home">
+      <span class="arrowl icon solid fa-chevron-left">
+       <span>
+       </span>
+      </span>
+     </a>
+     <header>
+      <h2>
+       What's New?
+      </h2>
+     </header>
+     <hr class="rounded3"/>
+     <div class="row">
+      <div class="content">
+       <ul class="collapsible-content" id="collapsibleList">
+        <li>
+         <p>
+          <span class="mydate">
+           <strong>
+            [2025.02]
+           </strong>
+           <img alt="" src="images/new2-static.gif" style="width:35px;height:35px;"/>
+          </span>
+          I was honored to serve on the program committee of the Research Track at
+          <a href="https://conf.researchr.org/home/ase-2025">
+           ASE 2025
+          </a>
+          . Welcome to submit your papers!
+         </p>
+         <p>
+         </p>
+        </li>
+        <li>
+         <p>
+          <span class="mydate">
+           <strong>
+            [2025.02]
+           </strong>
+           <img alt="" src="images/new2-static.gif" style="width:35px;height:35px;"/>
+          </span>
+          I was honored to serve on the program committee at
+          <a href="https://llmsc.github.io/">
+           the 1st International Workshop on Large Language Model Supply Chain Analysis (LLMSC 2025)
+          </a>
+          . Welcome to submit your papers!
+         </p>
+         <p>
+         </p>
+        </li>
+        <li>
+         <p>
+          <span class="mydate">
+           <strong>
+            [2025.01]
+           </strong>
+           <img alt="" src="images/new2-static.gif" style="width:35px;height:35px;"/>
+          </span>
+          Our paper titled "LLMs Meet Library Evolution: Evaluating Deprecated API Usage in LLM-based Code Completion" is accepted by
+          <a href="https://conf.researchr.org/track/icse-2025/icse-2025-research-track">
+           ICSE 2025
+          </a>
+          .
+         </p>
+         <p>
+         </p>
+        </li>
+        <li>
+         <p>
+          <span class="mydate">
+           <strong>
+            [2025.01]
+           </strong>
+           <img alt="" src="images/new2-static.gif" style="width:35px;height:35px;"/>
+          </span>
+          I was honored to serve as a reviewer for the
+          <a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=10206">
+           Transactions on Information Forensics &amp; Security
+          </a>
+          .
+         </p>
+         <p>
+         </p>
+        </li>
+        <li>
+         <p>
+          <span class="mydate">
+           <strong>
+            [2024.10]
+           </strong>
+           <img alt="" src="images/new2-static.gif" style="width:35px;height:35px;"/>
+          </span>
+          Our paper titled "Killing Two Birds with One Stone: Malicious Package Detection in NPM and PyPI using a Single Model of Malicious Behavior Sequence" is accepted by
+          <a href="https://dl.acm.org/journal/tosem">
+           ACM Transactions on Software Engineering and Methodology
+          </a>
+          .
+         </p>
+         <p>
+         </p>
+        </li>
+        <li>
+         <p>
+          <span class="mydate">
+           <strong>
+            [2024.08]
+           </strong>
+           <img alt="" src="images/new2-static.gif" style="width:35px;height:35px;"/>
+          </span>
+          Our paper titled "VMUD: Detecting Recurring Vulnerabilities with Multiple Fixing Functions via Function Selection and Semantic Equivalent Statement Matching" is accepted by
+          <a href="https://www.sigsac.org/ccs/CCS2024/call-for/call-for-papers.html">
+           CCS 2024
+          </a>
+          .
+         </p>
+         <p>
+         </p>
+        </li>
+        <li>
+         <p>
+          <span class="mydate">
+           <strong>
+            [2024.08]
+           </strong>
+           <img alt="" src="images/new2-static.gif" style="width:35px;height:35px;"/>
+          </span>
+          Our paper titled "Vision: Identifying Affected Library Versions for Open Source Software Vulnerabilities" is accepted by
+          <a href="https://conf.researchr.org/home/ase-2024">
+           ASE 2024
+          </a>
+          .
+         </p>
+         <p>
+         </p>
+        </li>
+        <li>
+         <!-- <p><span class="mydate"><strong>[2024.08]&nbsp;</strong><img src="images/new2.gif" style="width:35px;height:35px;" alt=""></span>Our paper titled "1+1>2: Integrating Deep Code Behaviors with Metadata Features for Malicious PyPI Package Detection" is accepted by <a href="https://conf.researchr.org/home/ase-2024">ASE 2024</a>. -->
+         <p>
+          <span class="mydate">
+           <strong>
+            [2024.08]
+           </strong>
+           <img alt="" src="images/new2-static.gif" style="width:35px;height:35px;"/>
+          </span>
+          Our paper titled "1+1&gt;2: Integrating Deep Code Behaviors with Metadata Features for Malicious PyPI Package Detection" is accepted by
+          <a href="https://conf.researchr.org/home/ase-2024">
+           ASE 2024
+          </a>
+          .
+         </p>
+         <p>
+         </p>
+        </li>
+        <li>
+         <p>
+          <span class="mydate">
+           <strong>
+            [2024.07]
+           </strong>
+          </span>
+          Our paper titled "Your "Notice" is Missing: Detecting and Fixing Violations of Modification Terms
+                                    in Open Source Licenses during Forking" is accepted by
+          <a href="https://2024.issta.org/track/issta-2024-papers">
+           ISSTA 2024
+          </a>
+          .
+         </p>
+         <p>
+         </p>
+        </li>
+        <li>
+         <p>
+          <span class="mydate">
+           <strong>
+            [2024.05]
+           </strong>
+          </span>
+          Our paper titled "Detecting Incompatible Third-Party Library APIs in Python Based on Static Analysis"
+                                    is accepted by
+          <a href="http://www.jos.org.cn">
+           JOS
+          </a>
+          .
+         </p>
+         <p>
+         </p>
+        </li>
+        <li>
+         <p>
+          <span class="mydate">
+           <strong>
+            [2024.03]
+           </strong>
+          </span>
+          I was invited to serve on the program committee of the Research Track at
+          <a href="https://2024.aiwareconf.org/track/aiware-2024-challenge-track ">
+           AIWare 2024 Challenge Track
+          </a>
+          .
+         </p>
+         <p>
+         </p>
+        </li>
+        <li>
+         <p>
+          <span class="mydate">
+           <strong>
+            [2024.03]
+           </strong>
+          </span>
+          I was invited to serve on the program committee of the Research Track at
+          <a href="https://issre.github.io/2024/">
+           ISSRE 2024
+          </a>
+          .
+         </p>
+         <p>
+         </p>
+        </li>
+        <li>
+         <p>
+          <span class="mydate">
+           <strong>
+            [2024.02]
+           </strong>
+          </span>
+          I have joined
+          <a href="https://en.tongji.edu.cn/p/#/">
+           Tongji University
+          </a>
+          as an Assitant Professor!
+         </p>
+         <p>
+         </p>
+        </li>
+        <li>
+         <p>
+          <span class="mydate">
+           <strong>
+            [2023.12]
+           </strong>
+          </span>
+          Our paper titled "Enhancing Field Tracking and Interprocedural Analysis to Find More Null Pointer
+                                    Exceptions" is accepted by
+          <a href="https://conf.researchr.org/home/saner-2024">
+           SANER 2024
+          </a>
+          .
+         </p>
+         <p>
+         </p>
+        </li>
+        <li>
+         <p>
+          <span class="mydate">
+           <strong>
+            [2023.12]
+           </strong>
+          </span>
+          Our paper titled "Identifying Affected Libraries and Their Ecosystems for Open Source Software
+                                    Vulnerabilities" is accepted by
+          <a href="https://conf.researchr.org/home/icse-2024">
+           ICSE 2024
+          </a>
+          .
+         </p>
+         <p>
+         </p>
+        </li>
+        <li>
+         <p>
+          <span class="mydate">
+           <strong>
+            [2023.12]
+           </strong>
+          </span>
+          I was invited to serve on the program committee of the Research Track at
+          <a href="https://conf.researchr.org/home/ase-2024">
+           ASE 2024
+          </a>
+          .
+         </p>
+         <p>
+         </p>
+        </li>
+        <li>
+         <p>
+          <span class="mydate">
+           <strong>
+            [2023.07]
+           </strong>
+          </span>
+          One paper titled "Demystifying Dependency Bugs in Deep Learning Stack" is accepted by
+          <a href="https://conf.researchr.org/home/fse-2023">
+           ESEC/FSE 2023
+          </a>
+          .
+         </p>
+         <p>
+         </p>
+        </li>
+        <li id="toggleButton" style="cursor: pointer;">
+         <u>
+          More
+         </u>
+        </li>
+        <li class="newsunshow">
+         <p>
+          <span class="mydate">
+           <strong>
+            [2023.06]
+           </strong>
+          </span>
+          I was invited to serve on the program committee of the Artifact Evaluation Track at
+          <a href="">
+           ESEC/FSE 2023
+          </a>
+          .
+         </p>
+         <p>
+         </p>
+        </li>
+        <li class="newsunshow">
+         <p>
+          <span class="mydate">
+           <strong>
+            [2023.06]
+           </strong>
+          </span>
+          One paper titled "Characterizing the Complexity and Its Impact on Testing in ML-Enabled Systems - A Case Study on Rasa" is accepted by
+          <a href="">
+           ICSME 2023
+          </a>
+          .
+         </p>
+         <p>
+         </p>
+        </li>
+        <li class="newsunshow">
+         <p>
+          <span class="mydate">
+           <strong>
+            [2022.09]
+           </strong>
+          </span>
+          I was invited to serve on the program committee of the Artifact Evaluation Track at
+          <a href="">
+           ICSE 2023
+          </a>
+          .
+         </p>
+         <p>
+         </p>
+        </li>
+        <li class="newsunshow">
+         <p>
+          <span class="mydate">
+           <strong>
+            [2022.08]
+           </strong>
+          </span>
+          I was invited to serve on the program committee of Tool Demo Track at
+          <a href="">
+           SANER 2023
+          </a>
+          .
+         </p>
+         <p>
+         </p>
+        </li>
+        <li class="newsunshow">
+         <p>
+          <span class="mydate">
+           <strong>
+            [2022.06]
+           </strong>
+          </span>
+          One paper titled "Tracking Patches for Open Source Software Vulnerabilities" is accepted by
+          <a href="">
+           ESEC/FSE 2022
+          </a>
+          .
+         </p>
+         <p>
+         </p>
+        </li>
+        <li class="newsunshow">
+         <p>
+          <span class="mydate">
+           <strong>
+            [2022.04]
+           </strong>
+          </span>
+          I was awarded the Outstanding Graduate of Fudan University.
+         </p>
+        </li>
+        <li class="newsunshow">
+         <p>
+          <span class="mydate">
+           <strong>
+            [2022.02]
+           </strong>
+          </span>
+          One paper titled "Characterizing Usages, Updates and Risks of Third-Party Libraries in Java Projects" is accepted by
+          <a href="">
+           EMSE 2022
+          </a>
+          .
+         </p>
+         <p>
+         </p>
+        </li>
+        <li class="newsunshow">
+         <p>
+          <span class="mydate">
+           <strong>
+            [2022.01]
+           </strong>
+          </span>
+          I joined Fudan University as a Postdoctoral Research Fellow.
+         </p>
+        </li>
+        <li class="newsunshow">
+         <p>
+          <span class="mydate">
+           <strong>
+            [2021.12]
+           </strong>
+          </span>
+          I was honored to receive Fudan Super-PostDoctoral Fellowship.
+         </p>
+        </li>
+        <li class="newsunshow">
+         <p>
+          <span class="mydate">
+           <strong>
+            [2021.12]
+           </strong>
+          </span>
+          I got my PhD from Fudan University. Thesis entitled "Third-Party Library Harmonization and Update Recommendation Based on API Analysis".
+         </p>
+        </li>
+        <li class="newsunshow">
+         <p>
+          <span class="mydate">
+           <strong>
+            [2021.12]
+           </strong>
+          </span>
+          I was honored to give talks at "
+          <a href="">
+           2021 CCF Chinasoft
+          </a>
+          Open Source Symposium" and "2021 CCF Chinasoft Doctoral Symposium"
+         </p>
+         <p>
+         </p>
+        </li>
+        <li class="newsunshow">
+         <p>
+          <span class="mydate">
+           <strong>
+            [2021.07]
+           </strong>
+          </span>
+          One paper titled "RepFinder: Finding Replacements for Missing APIs in Library Update" is accepted by
+          <a href="">
+           ASE 2021
+          </a>
+          .
+         </p>
+         <p>
+         </p>
+        </li>
+       </ul>
+      </div>
+     </div>
+     <a href="#publication">
+      <span class="arrow icon solid fa-chevron-right">
+       <span>
+       </span>
+      </span>
+     </a>
+    </article>
+    <!------------------------------------- Publication ----------------------------------------------------------------------->
+    <article class="panel" id="publication">
+     <a href="#news">
+      <span class="arrowl icon solid fa-chevron-left">
+       <span>
+       </span>
+      </span>
+     </a>
+     <header>
+      <h2>
+       Publications
+      </h2>
+     </header>
+     <hr class="rounded3"/>
+     <section>
+      <div class="content">
+       <!-- <hr> -->
+       <ol>
+        <li><p><b><font size="3" color="#0b5394">[ICSE'25]</font></b> <strong>LLMs Meet Library Evolution: Evaluating Deprecated API Usage in LLM-based Code Completion. </strong><br> Chong Wang, <u>Kaifeng Huang</u>, Jian Zhang, Yibo Feng, Lyuye Zhang, Yang Liu, Peng Xin.<em>&nbsp;In Proceedings of the 47th IEEE/ACM International Conference on Software Engineering, Ottawa, Ontario, Canada, accepted, 2025.</em></p></li>
 <li><p><b><font size="3" color="#0b5394">[TOSEM'24]</font></b> <strong>Killing Two Birds with One Stone: Malicious Package Detection in NPM and PyPI using a Single Model of Malicious Behavior Sequence. <a href="https://dl.acm.org/doi/10.1145/3705304">[PDF]</a></strong><br> Junan Zhang, <u>Kaifeng Huang</u>, Yiheng Huang, Bihuan Chen, Ruisi Wang, Chong Wang, Xin Peng.<em>&nbsp;ACM Transactions on Software Engineering and Methodology,  accepted, 2024.</em></p></li>
 <li><p><b><font size="3" color="#0b5394">[CCS'24]</font></b> <strong>VMUD: Detecting Recurring Vulnerabilities with Multiple Fixing Functions via Function Selection and Semantic Equivalent Statement Matching. <a href="https://dl.acm.org/doi/10.1145/3658644.3690372">[PDF]</a></strong><br> <u>Kaifeng Huang</u>, Chenhao Lu, Yiheng Cao, Bihuan Chen, Xin Peng.<em>&nbsp;In Proceedings of the 31th ACM Conference on Computer and Communications Security, Salt Lake City,  United States, pp. 3958-3972, 2024.</em></p></li>
 <li><p><b><font size="3" color="#0b5394">[ASE'24]</font></b> <strong>Vision: Identifying Affected Library Versions for Open Source Software Vulnerabilities. <a href="https://dl.acm.org/doi/10.1145/3691620.3695516">[PDF]</a></strong><br> Susheng Wu, Ruisi Wang, <u>Kaifeng Huang</u>, Yiheng Cao, Wenyan Song, Zhuotong Zhou, Yiheng Huang, Bihuan Chen, Xin Peng.<em>&nbsp;In Proceedings of the 39th IEEE/ACM International Conference on Automated Software Engineering, Sacramento, California, United States, pp. 1447-1459, 2024.</em></p></li>
@@ -356,169 +803,334 @@
 <li><p><b><font size="3" color="#0b5394">[ASE'18]</font></b> <strong>Cldiff: Generating Concise Linked Code Differences. <a href="https://dl.acm.org/doi/10.1145/3238147.3238219">[PDF]</a></strong><div id="distinguished"><font size="3" color="#0b5394">&nbsp;&nbsp;🏆ACM SIGSOFT Distinguished Paper Award&nbsp;&nbsp;</font></div><br> <u>Kaifeng Huang</u>, Daihong Zhou, Bihuan Chen, Ying Wang, Wenyun Zhao, Xin Peng, Yang Liu.<em>&nbsp;In Proceedings of the 33rd IEEE/ACM International Conference on Automated Software Engineering, Montpellier, France, pp. 679-690, 2018.</em></p></li>
 <li><p><b><font size="3" color="#0b5394">[ICSA'20]</font></b> <strong>Designdiff: Continuously Modeling Software Design Difference from Code Revisions. <a href="https://ieeexplore.ieee.org/document/9101195">[PDF]</a></strong><br> Xiao Wang, Lu Xiao, <u>Kaifeng Huang</u>, Bihuan Chen, Yutong Zhao, Yang Liu.<em>&nbsp;In Proceedings of the IEEE International Conference on Software Architecture, Salvador, Bahia, Brazil, pp. 179-190, 2020.</em></p></li>
 
-                        </ol>
-                    </div>
-                </section>
-                <a href="#tools">
-                    <span class="arrow icon solid fa-chevron-right"><span></span></span>
-                </a>
-            </article>
-
-
-            <!-- Tools -->
-            <article id="tools" class="panel">
-                <a href="#publication">
-                    <span class="arrowl icon solid fa-chevron-left"><span></span></span>
-                </a>
-                <header>
-                    <h2>Tools</h2>
-                </header>
-                <hr class="rounded3">
-                <section>
-                    <div class="content">
-                        <h3>CVEs found by <a href="#publication">VMUD</a>:</h3>
-                        <ul>
-                            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2024-24891">CVE-2024-24891</a>: Exposure of Sensitive Information to an Unauthorized Actor vulnerability in <a href="https://gitee.com/openeuler/kernel">openEuler/kernel</a>.</li>
-                            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2024-24898">CVE-2024-24898</a>: Exposure of Sensitive Information to an Unauthorized Actor vulnerability in <a href="https://gitee.com/openeuler/kernel">openEuler/kernel</a>.</li>
-                            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2023-51437">CVE-2023-51437</a>: Observable timing discrepancy vulnerability in <a href="https://github.com/apache/pulsar">apache/pulsar</a>.</li>
-                            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2023-41080">CVE-2023-41080</a>: URL Redirection vulnerability in <a href="https://github.com/apache/tomcat">apache/tomcat</a>.</li>
-                            <li><a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-29645">CVE-2024-29645</a>: Reserved vulnerability in <a href="https://github.com/radareorg/radare2">radareorg/radare2</a>.</li> 
-                            <li><a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-29646">CVE-2024-29646</a>: Reserved vulnerability in <a href="https://github.com/radareorg/radare2">radareorg/radare2</a>.</li>
-                            <li><a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-31668">CVE-2024-31668</a>: Reserved vulnerability in <a href="https://github.com/rizinorg/rizin">rizinorg/rizin</a>.</li>
-                            <li><a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-31669">CVE-2024-31669</a>: Reserved vulnerability in <a href="https://github.com/rizinorg/rizin">rizinorg/rizin</a>.</li>
-                            <li><a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-31670">CVE-2024-31670</a>: Reserved vulnerability in <a href="https://github.com/rizinorg/rizin">rizinorg/rizin</a>.</li>
-                        </ul>
-
-                    </div>
-                </section>
-
-                <a href="#service">
-                    <span class="arrow icon solid fa-chevron-right"><span></span></span>
-                </a>
-            </article>
-
-
-
-            <!-- Services -->
-            <article id="service" class="panel">
-                <a href="#tools">
-                    <span class="arrowl icon solid fa-chevron-left"><span></span></span>
-                </a>
-                <header>
-                    <h2>Academic Services</h2>
-                </header>
-                <hr class="rounded3">
-                <section>
-                    <div class="content">
-                        <h3>Journal Reviewers:</h3>
-                        <ul>
-                            <li>IEEE Transactions on Information Forensics & Security</li>
-                            <li>ACM Transactions on Software Engineering and Methodology</li>
-                            <li>Journal of Software: Evolution and Process</li>
-                            <li>IEEE Transactions on Software Engineering</li>
-                            <li>Journal of Systems & Software</li>
-                            <li>Science of Computer Programming</li>
-                            <li>Empirical Software Engineering</li>
-                            <li>Automated Software Engineering Journal</li>
-                            <li>IEEE Transactions on Reliability</li>
-                            <li>Journal of Software (软件学报)</li>
-                        </ul>
-                        <h3>Conference PC Members:</h3>
-                        <ul>
-                            <li>面向复杂系统的软件分析与测试专刊《Automated Software Engineering Journal》, CCF ChinaSoft 2024</li>
-                            <li>Early Research Achievement, SANER 2025</li>
-                            <li>AIWare Challenge, 2024</li>
-                            <li>Research Track, ISSRE 2024</li>
-                            <li>Research Track, ASE 2024</li>
-                            <li>Junior PC-Track, MSR 2024</li>
-                            <li>Artifact Evaluation Track, ESEC/FSE 2023</li>
-                            <li>Artifact Evaluation Track, ICSE 2023</li>
-                            <li>Tool Demo Track, SANER 2024</li>
-                            <li>Tool Demo Track, SANER 2023</li>
-                        </ul>
-
-                    </div>
-                </section>
-
-                <a href="#contact">
-                    <span class="arrow icon solid fa-chevron-right"><span></span></span>
-                </a>
-            </article>
-
-            <!-- Contact -->
-            <article id="contact" class="panel">
-                <a href="#service">
-                    <span class="arrowl icon solid fa-chevron-left"><span></span></span>
-                </a>
-                <header>
-                    <h2>Contact Me</h2>
-                </header>
-                <hr class="rounded3">
-                <form action="#" method="post">
-                    <section>
-                        <dl class="alt">
-                            <!-- <img src="images/location.svg" style="width:50px;height:50px;" alt=""> -->
-                            <!-- <h2 >Address:</h2> -->
-                            <b>Address:</b> Room 408R, Jishi Building, No. 4800 Caoan highway, Shanghai, China.
-                        </dl>
-                        <dl class="alt">
-                            <!-- <img src="" alt="tongjimail" border="0"> -->
-                            <!-- <b>Mail:</b> kaifengh<img src="images/tongjimail.png" style="width:112px;height:17px;" alt=""></a> -->
-                            <b>Mail:</b>&nbsp;kaifengh<img src="" style="width:112px;height:17px;" alt=""></a>
-                        </dl>
-                        <dl class="contact-icons color1">
-                            <!-- <h2>Links:</h2> -->
-                            <b>Links:</b>
-                            <ul class="contact-icons color1">
-                                <li>
-                                    <a href="https://github.com/kaifeng-h"> <img src="images/github.svg" style="width:33px;height:33px;" alt=""></a>
-                                </li>
-
-                                <li>
-                                    <a href="https://scholar.google.com/citations?user=lrspoIAAAAAJ&hl=en&oi=ao"> <img src="images/scholar.svg" style="width:33px;height:33px;" alt=""></a>
-                                </li>
-                                <li>
-                                    <a href="https://dblp.uni-trier.de/pid/225/0416.html"> <img src="images/dblp.svg" style="width:33px;height:33px;" alt=""></a>
-                                </li>
-
-                                <li>
-                                    <a href="https://orcid.org/my-orcid?orcid=0009-0000-1513-8254"> <img src="images/ORCID_iD.svg" style="width:33px;height:33px;" alt=""></a>
-                                </li>
-                            </ul>
-                        </dl>
-
-                    </section>
-
-
-                </form>
-
-            </article>
-
-        </div>
-
-        <!-- Footer -->
-        <div id="footer">
-            <ul class="copyright">
-                <li>&copy;Copyright </li>
-                <li><a href="http://html5up.net">Template from HTML5 UP</a></li>
-            </ul>
-        </div>
-
-    </div>
-
-    <!-- Scripts -->
-    <script src="https://s3.pstatp.com/cdn/expire-1-w/jquery/3.4.1/jquery.min.js"></script>
-    <!-- <script src="assets/js/jquery.min.js"></script> -->
-    <script src="assets/js/browser.min.js"></script>
-    <script src="assets/js/breakpoints.min.js"></script>
-    <script src="assets/js/util-min.js"></script>
-    <script src="assets/js/keyboard.min.js"></script>
-    <script src="assets/js/main-min.js"></script>
-
-</body>
-
+       </ol>
+      </div>
+     </section>
+     <a href="#tools">
+      <span class="arrow icon solid fa-chevron-right">
+       <span>
+       </span>
+      </span>
+     </a>
+    </article>
+    <!-- Tools -->
+    <article class="panel" id="tools">
+     <a href="#publication">
+      <span class="arrowl icon solid fa-chevron-left">
+       <span>
+       </span>
+      </span>
+     </a>
+     <header>
+      <h2>
+       Tools
+      </h2>
+     </header>
+     <hr class="rounded3"/>
+     <section>
+      <div class="content">
+       <h3>
+        CVEs found by
+        <a href="#publication">
+         VMUD
+        </a>
+        :
+       </h3>
+       <ul>
+        <li>
+         <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-24891">
+          CVE-2024-24891
+         </a>
+         : Exposure of Sensitive Information to an Unauthorized Actor vulnerability in
+         <a href="https://gitee.com/openeuler/kernel">
+          openEuler/kernel
+         </a>
+         .
+        </li>
+        <li>
+         <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-24898">
+          CVE-2024-24898
+         </a>
+         : Exposure of Sensitive Information to an Unauthorized Actor vulnerability in
+         <a href="https://gitee.com/openeuler/kernel">
+          openEuler/kernel
+         </a>
+         .
+        </li>
+        <li>
+         <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-51437">
+          CVE-2023-51437
+         </a>
+         : Observable timing discrepancy vulnerability in
+         <a href="https://github.com/apache/pulsar">
+          apache/pulsar
+         </a>
+         .
+        </li>
+        <li>
+         <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-41080">
+          CVE-2023-41080
+         </a>
+         : URL Redirection vulnerability in
+         <a href="https://github.com/apache/tomcat">
+          apache/tomcat
+         </a>
+         .
+        </li>
+        <li>
+         <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-29645">
+          CVE-2024-29645
+         </a>
+         : Reserved vulnerability in
+         <a href="https://github.com/radareorg/radare2">
+          radareorg/radare2
+         </a>
+         .
+        </li>
+        <li>
+         <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-29646">
+          CVE-2024-29646
+         </a>
+         : Reserved vulnerability in
+         <a href="https://github.com/radareorg/radare2">
+          radareorg/radare2
+         </a>
+         .
+        </li>
+        <li>
+         <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-31668">
+          CVE-2024-31668
+         </a>
+         : Reserved vulnerability in
+         <a href="https://github.com/rizinorg/rizin">
+          rizinorg/rizin
+         </a>
+         .
+        </li>
+        <li>
+         <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-31669">
+          CVE-2024-31669
+         </a>
+         : Reserved vulnerability in
+         <a href="https://github.com/rizinorg/rizin">
+          rizinorg/rizin
+         </a>
+         .
+        </li>
+        <li>
+         <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-31670">
+          CVE-2024-31670
+         </a>
+         : Reserved vulnerability in
+         <a href="https://github.com/rizinorg/rizin">
+          rizinorg/rizin
+         </a>
+         .
+        </li>
+       </ul>
+      </div>
+     </section>
+     <a href="#service">
+      <span class="arrow icon solid fa-chevron-right">
+       <span>
+       </span>
+      </span>
+     </a>
+    </article>
+    <!-- Services -->
+    <article class="panel" id="service">
+     <a href="#tools">
+      <span class="arrowl icon solid fa-chevron-left">
+       <span>
+       </span>
+      </span>
+     </a>
+     <header>
+      <h2>
+       Academic Services
+      </h2>
+     </header>
+     <hr class="rounded3"/>
+     <section>
+      <div class="content">
+       <h3>
+        Journal Reviewers:
+       </h3>
+       <ul>
+        <li>
+         IEEE Transactions on Information Forensics &amp; Security
+        </li>
+        <li>
+         ACM Transactions on Software Engineering and Methodology
+        </li>
+        <li>
+         Journal of Software: Evolution and Process
+        </li>
+        <li>
+         IEEE Transactions on Software Engineering
+        </li>
+        <li>
+         Journal of Systems &amp; Software
+        </li>
+        <li>
+         Science of Computer Programming
+        </li>
+        <li>
+         Empirical Software Engineering
+        </li>
+        <li>
+         Automated Software Engineering Journal
+        </li>
+        <li>
+         IEEE Transactions on Reliability
+        </li>
+        <li>
+         Journal of Software (软件学报)
+        </li>
+       </ul>
+       <h3>
+        Conference PC Members:
+       </h3>
+       <ul>
+        <li>
+         Research Track, ASE 2025
+        </li>
+        <li>
+         The 1st International Workshop on Large Language Model Supply Chain Analysis (LLMSC 2025)
+        </li>
+        <li>
+         面向复杂系统的软件分析与测试专刊《Automated Software Engineering Journal》, CCF ChinaSoft 2024
+        </li>
+        <li>
+         Early Research Achievement, SANER 2025
+        </li>
+        <li>
+         AIWare Challenge, 2024
+        </li>
+        <li>
+         Research Track, ISSRE 2024
+        </li>
+        <li>
+         Research Track, ASE 2024
+        </li>
+        <li>
+         Junior PC-Track, MSR 2024
+        </li>
+        <li>
+         Artifact Evaluation Track, ESEC/FSE 2023
+        </li>
+        <li>
+         Artifact Evaluation Track, ICSE 2023
+        </li>
+        <li>
+         Tool Demo Track, SANER 2024
+        </li>
+        <li>
+         Tool Demo Track, SANER 2023
+        </li>
+       </ul>
+      </div>
+     </section>
+     <a href="#contact">
+      <span class="arrow icon solid fa-chevron-right">
+       <span>
+       </span>
+      </span>
+     </a>
+    </article>
+    <!-- Contact -->
+    <article class="panel" id="contact">
+     <a href="#service">
+      <span class="arrowl icon solid fa-chevron-left">
+       <span>
+       </span>
+      </span>
+     </a>
+     <header>
+      <h2>
+       Contact Me
+      </h2>
+     </header>
+     <hr class="rounded3"/>
+     <form action="#" method="post">
+      <section>
+       <dl class="alt">
+        <!-- <img src="images/location.svg" style="width:50px;height:50px;" alt=""> -->
+        <!-- <h2 >Address:</h2> -->
+        <b>
+         Address:
+        </b>
+        Room 408R, Jishi Building, No. 4800 Caoan highway, Shanghai, China.
+       </dl>
+       <dl class="alt">
+        <!-- <img src="" alt="tongjimail" border="0"> -->
+        <!-- <b>Mail:</b> kaifengh<img src="images/tongjimail.png" style="width:112px;height:17px;" alt=""></a> -->
+        <b>
+         Mail:
+        </b>
+        kaifengh
+        <img alt="" src="" style="width:112px;height:17px;"/>
+       </dl>
+       <dl class="contact-icons color1">
+        <!-- <h2>Links:</h2> -->
+        <b>
+         Links:
+        </b>
+        <ul class="contact-icons color1">
+         <li>
+          <a href="https://github.com/kaifeng-h">
+           <img alt="" src="images/github.svg" style="width:33px;height:33px;"/>
+          </a>
+         </li>
+         <li>
+          <a href="https://scholar.google.com/citations?user=lrspoIAAAAAJ&amp;hl=en&amp;oi=ao">
+           <img alt="" src="images/scholar.svg" style="width:33px;height:33px;"/>
+          </a>
+         </li>
+         <li>
+          <a href="https://dblp.uni-trier.de/pid/225/0416.html">
+           <img alt="" src="images/dblp.svg" style="width:33px;height:33px;"/>
+          </a>
+         </li>
+         <li>
+          <a href="https://orcid.org/my-orcid?orcid=0009-0000-1513-8254">
+           <img alt="" src="images/ORCID_iD.svg" style="width:33px;height:33px;"/>
+          </a>
+         </li>
+        </ul>
+       </dl>
+      </section>
+     </form>
+    </article>
+   </div>
+   <!-- Footer -->
+   <div id="footer">
+    <ul class="copyright">
+     <li>
+      ©Copyright
+     </li>
+     <li>
+      <a href="http://html5up.net">
+       Template from HTML5 UP
+      </a>
+     </li>
+    </ul>
+   </div>
+  </div>
+  <!-- Scripts -->
+  <script src="https://s3.pstatp.com/cdn/expire-1-w/jquery/3.4.1/jquery.min.js">
+  </script>
+  <!-- <script src="assets/js/jquery.min.js"></script> -->
+  <script src="assets/js/browser.min.js">
+  </script>
+  <script src="assets/js/breakpoints.min.js">
+  </script>
+  <script src="assets/js/util-min.js">
+  </script>
+  <script src="assets/js/keyboard.min.js">
+  </script>
+  <script src="assets/js/main-min.js">
+  </script>
+ </body>
 </html>
-
-
-
 <!-- <i class="fa fa-file-pdf-o" style="color:FireBrick"></i> -->

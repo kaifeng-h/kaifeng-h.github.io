@@ -1,5 +1,6 @@
 import os
 import sqlite3
+from bs4 import BeautifulSoup
 
 def xiaowang(x):
     if x == "dahuang":
@@ -11,16 +12,64 @@ def xiaowang(x):
         html = f.read()
 
     pub = updatePub(conn)
-    news = updateNews(conn)
+    updated_html = updateNews(conn, html)
+
+
 
     with open('index.html','w') as f:
-        newContent = html.replace("PUBLICATION__CONTENT", pub) #.replace("NEWS__CONTENT", pub)
+        newContent = updated_html.replace("PUBLICATION__CONTENT", pub) #.replace("NEWS__CONTENT", pub)
         f.write(newContent)
 
     conn.close()
 
-def updateNews(conn):
-    return None
+def updateNews(conn, html):
+    soup = BeautifulSoup(html, features="html.parser")
+    element = soup.select_one('#collapsibleList')
+    cnt = 1
+    limit = 8
+    limit_date = None
+    for child in element.children:
+        if child.name:
+            if(cnt <= limit -1 ):
+                cnt += 1
+                continue
+            
+            # No. 8
+            if(cnt == limit):
+                date = child.select_one('p:nth-child(1) > span > strong')
+                limit_date = date.text.strip(' ').lstrip('[').rstrip(']')
+                # print('limite date: ' + limit_date)
+                cnt += 1
+                continue
+            # print(child.text.strip())
+            date = child.select_one('p:nth-child(1) > span > strong')
+            new_date = date.text.strip(' ').lstrip('[').rstrip(']')
+            if new_date == limit_date:
+                cnt += 1
+                continue
+            else:
+                break
+    cnt -=1
+    new_cnt = 1
+    for child in element.children:
+        if child.name:
+            if(new_cnt <= cnt):
+                # todo
+                date_ele = child.select_one('p:nth-child(1) > span > strong')
+                new_img_tag = soup.new_tag('img')
+                new_img_tag['src'] = 'images/new2-static.gif'
+                new_img_tag['style'] = 'width:35px;height:35px;'
+                new_img_tag['alt'] = ''
+                date_ele.insert_after(new_img_tag)
+                new_cnt += 1
+            else:
+                break
+
+        #
+    # Transform the BeautifulSoup object back into an HTML document
+    updated_html = soup.prettify()  # For nicely formatted HTML
+    # print(updated_html)
+    return updated_html
     
 def updatePub(conn):
     # conn = sqlite3.connect('./src/info.sqlite')
