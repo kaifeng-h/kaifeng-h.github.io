@@ -10,7 +10,8 @@
     <title>Kaifeng Huang - Home</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <link rel="stylesheet" href="assets/css/main-min.css" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <!-- <link rel="stylesheet" href="assets/css/main-min.css" /> -->
     <link rel="stylesheet" href="assets/css/fontawesome-all.min.css" />
     <!-- CSS only -->
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
@@ -32,6 +33,9 @@
 
     <!-- Wrapper-->
     <div id="wrapper">
+        
+          
+        
         <!-- Nav -->
         <nav id="nav">
             <a href="#home" class="icon solid fa-home"><span>Home</span></a>
@@ -42,6 +46,16 @@
             <a href="#contact" class="icon solid fa-comments"><span>Contacts</span></a>
             <!-- <a href="https://twitter.com/ajlkn" class="icon brands fa-twitter"><span>Twitter</span></a> -->
         </nav>
+
+        <div id="langtog" class="">
+                <div class="switch">
+                    <input id="language-toggle" class="check-toggle check-toggle-round-flat" type="checkbox">
+                    <label for="language-toggle"></label>
+                    <span class="on">EN</span>
+                    <span class="off">中</span>
+                </div>
+        </div>
+
         <!-- Main -->
         <div id="main">
 
@@ -53,7 +67,8 @@
 
                     <!-- <h2>About</h2> -->
                     <p>Kaifeng Huang is an Assistant Professor (tenure-track) at School of Computer Science and Technology, Tongji University. Prior to that, he was a research fellow at Software Engineering Lab, Fudan University. He obtained his PhD from Fudan University
-                        in 2022, supervised by <a href="https://cspengxin.github.io/">Prof. Xin Peng</a> and <a href="https://chenbihuan.github.io/">Prof. Bihuan Chen</a>.
+                        in 2022.
+                        <!-- , supervised by <a href="https://cspengxin.github.io/">Prof. Xin Peng</a> and <a href="https://chenbihuan.github.io/">Prof. Bihuan Chen</a>. -->
                     </p>
                     <p>
                         His research interests focus on open source software supply chain, software security and software evolution. He serves in the reviewer panels and program committees of IEEE Transactions on Software Engineering, ACM Transactions on Software Engineering and Methodology, Journal of Systems & Software, ASE 2024, ISSRE 2024, ICSE AE 2023, etc. He was the awardee of the ACM SIGSOFT Distinguished Paper Award at ASE 2018 and IEEE TCSE Distinguished Paper Award at ICSME 2020.
@@ -184,19 +199,6 @@
                     <div class="content">
                         <ul id="collapsibleList" class="collapsible-content">
                             
-                             <li>
-                                <p><span class="mydate"><strong>[2025.11]&nbsp;</strong></span>Our paper titled "Uncovering Pretraining Code in LLMs: A Syntax-Aware Attribution Approach" is accepted by <a href="https://aaai.org/conference/aaai/aaai-26/">AAAI 2026</a>.
-                                </p>
-                                <p></p>
-                            </li>
-
-                            <li>
-                                <p><span class="mydate"><strong>[2025.11]&nbsp;</strong></span>
-                                    I was honored to be selected as a Distinguished Reviewer for the 40th IEEE/ACM International Conference on Automated Software Engineering (ASE 2025)!
-                                <p></p>
-                            </li>
-
-
                             <li>
                                 <p><span class="mydate"><strong>[2025.06]&nbsp;</strong></span>
                                     I was invited to serve as a reviewer for the Chinese Journal of Computers. 
@@ -303,29 +305,27 @@
                                 <p><span class="mydate"><strong>[2024.02]&nbsp;</strong></span>I have joined <a href="https://en.tongji.edu.cn/p/#/">Tongji University</a> as an Assitant Professor!</p>
                                 <p></p>
                             </li>
-                            <li id="toggleButton" style="cursor: pointer;"><u>More</u></li>
 
-                            <li class="newsunshow">
+                            <li>
                                 <p><span class="mydate"><strong>[2023.12]&nbsp;</strong></span>Our paper titled "Enhancing Field Tracking and Interprocedural Analysis to Find More Null Pointer
                                     Exceptions" is accepted by <a href="https://conf.researchr.org/home/saner-2024">SANER 2024</a>.
                                 </p>
                                 <p></p>
                             </li>
-                            <li class="newsunshow">
+                            <li>
                                 <p><span class="mydate"><strong>[2023.12]&nbsp;</strong></span>Our paper titled "Identifying Affected Libraries and Their Ecosystems for Open Source Software
                                     Vulnerabilities" is accepted by <a href="https://conf.researchr.org/home/icse-2024">ICSE 2024</a>.</p>
                                 <p></p>
                             </li>
-                            <li class="newsunshow">
+                            <li>
                                 <p><span class="mydate"><strong>[2023.12]&nbsp;</strong></span>I was invited to serve on the Program Committee of the Research Track at <a href="https://conf.researchr.org/home/ase-2024">ASE 2024</a>.</p>
                                 <p></p>
                             </li>
-                            <li class="newsunshow">
+                            <li>
                                 <p><span class="mydate"><strong>[2023.07]&nbsp;</strong></span>One paper titled "Demystifying Dependency Bugs in Deep Learning Stack" is accepted by <a href="https://conf.researchr.org/home/fse-2023">ESEC/FSE 2023</a>.</p>
                                 <p></p>
                             </li>
-                            
-                            
+                            <li id="toggleButton" style="cursor: pointer;"><u>More</u></li>
                             <li class="newsunshow">
                                 <p><span class="mydate"><strong>[2023.06]&nbsp;</strong></span>I was invited to serve on the Program Committee of the Artifact Evaluation Track at <a href="">ESEC/FSE 2023</a>.</p>
                                 <p></p>
@@ -455,7 +455,6 @@
                     <div class="content">
                         <h3>Journal Reviewers:</h3>
                         <ul>
-                            <li>Springer Cybersecurity</li>
                             <li>IEEE Transactions on Computational Social Systems</li>
                             <li>IEEE Transactions on Information Forensics & Security</li>
                             <li>ACM Transactions on Software Engineering and Methodology</li>
@@ -471,7 +470,6 @@
                         </ul>
                         <h3>Conference PC Members:</h3>
                         <ul>
-                            <li>Main Technical Conference, AAAI 2026</li>
                             <li>智能化基础软件可信构造与供应链安全专刊, CCF ChinaSoft 2025</li>
                             <li>Research Track, FSE 2026</li>
                             <li>SEIP Track, APSEC 2025</li>
@@ -488,13 +486,12 @@
                             <li>Tool Demo Track, SANER 2024</li>
                             <li>Tool Demo Track, SANER 2023</li>
                         </ul>
+
                         <h3>Invited Talks:</h3>
                         <ul>
-                            <li>“智能软件工程视角下的开源风险检测”，CCF软件工程专委会青年论坛“智能化软件工程”学术报告会，辽宁，沈阳，东北大学，2025-10-26.</li>
-                            <li>"Toward Understanding Risks in Large Language Model Supply Chain: A Preliminary and Prospective Analysis", The 2nd International Workshop on Large Language Model Supply Chain Analysis (LLMSC 2026), Montreal, Canada, Co-located with FSE'26, 2026-07-05.</li>
-                            <li>“数据驱动的开源风险治理提升”，扬州大学信息工程学院（人工智能学院）专家报告，线上，2025-04-22.</li>
-                            <li>“数据驱动的开源风险治理提升——精细化与智能化思路探索”，CCF形式化方法专委会青年学术论坛高可信人机物智能软件与系统研讨会，上海，华东师范大学，2025-03-28.</li>
+                            <li>XXXXX</li>
                         </ul>
+
                     </div>
                 </section>
 

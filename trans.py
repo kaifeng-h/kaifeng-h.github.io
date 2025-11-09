@@ -80,6 +80,9 @@ def updatePub(conn):
         title = data[1]
         author = data[3]
         aus = author.split(';')
+        hidden = data[30]
+        if hidden =='true':
+            continue
         newAus = ''
         for au in aus:
             if au == '':
