@@ -81,6 +81,7 @@ def updatePub(conn):
         author = data[3]
         aus = author.split(';')
         hidden = data[30]
+        arxiv = data[31]
         if hidden =='true':
             continue
         newAus = ''
@@ -135,6 +136,8 @@ def updatePub(conn):
         pdf = ''
         if data[28] != None:
             pdf = '<a href="' +data[28]+'">[PDF]</a>'
+        if data[28] == None and arxiv != None:
+            pdf = '<a href="' + arxiv+'">[arXiv]</a>'
         # pdf= "[PDF]"
         template = f'<li><p><b><font size="3" color="#0b5394">[{acroym}]</font></b> <strong>{title}. {pdf}</strong>{distinguishedpaper}<br>{author}.<em>&nbsp;{source}, {loc} {page}, {year}.</em></p></li>'
         s = s + template + '\n'
