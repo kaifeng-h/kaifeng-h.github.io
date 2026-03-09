@@ -74,7 +74,7 @@ def updateNews(conn, html):
 def updatePub(conn):
     # conn = sqlite3.connect('./src/info.sqlite')
     c = conn.cursor()
-    cursor = c.execute('select * from pubs order by "order" desc;')
+    cursor = c.execute('select * from publications order by "order" desc;')
     s = ''
     for data in cursor:
         title = data[1]
@@ -134,8 +134,10 @@ def updatePub(conn):
             distinguishedpaper = tcse
 
         pdf = ''
+        # pdf link
         if data[28] != None:
             pdf = '<a href="' +data[28]+'">[PDF]</a>'
+        # arxiv link
         if data[28] == None and arxiv != None:
             pdf = '<a href="' + arxiv+'">[arXiv]</a>'
         # pdf= "[PDF]"
