@@ -2,6 +2,7 @@ import os
 import sqlite3
 from bs4 import BeautifulSoup
 
+# main function
 def xiaowang(x):
     if x == "dahuang":
         print("爱你哦～")
@@ -10,15 +11,16 @@ def xiaowang(x):
     conn = sqlite3.connect('./src/info.sqlite')
     with open('index_template.html','r') as f:
         html = f.read()
-
-    pub = updatePub(conn)
+    
+    # Update news
+    pub, bibcode = updatePub(conn)
     updated_html = updateNews(conn, html)
-
-
-
+    
+    # Update pubs
     with open('index.html','w') as f:
-        newContent = updated_html.replace("PUBLICATION__CONTENT", pub) #.replace("NEWS__CONTENT", pub)
-        f.write(newContent)
+        updated_pub = updated_html.replace("PUBLICATION__CONTENT", pub) #.replace("NEWS__CONTENT", pub)
+        updated_pub_bib = updated_pub.replace("TEMPLATE_BIB", bibcode)
+        f.write(updated_pub_bib)
 
     conn.close()
 
@@ -76,12 +78,14 @@ def updatePub(conn):
     c = conn.cursor()
     cursor = c.execute('select * from publications order by "order" desc;')
     s = ''
+    bibcode = {}
     for data in cursor:
         title = data[1]
         author = data[3]
         aus = author.split(';')
         hidden = data[30]
         arxiv = data[31]
+        bib = data[33]
         if hidden =='true':
             continue
         newAus = ''
@@ -141,10 +145,19 @@ def updatePub(conn):
         if data[28] == None and arxiv != None:
             pdf = '<a href="' + arxiv+'">[arXiv]</a>'
         # pdf= "[PDF]"
-        template = f'<li><p><b><font size="3" color="#0b5394">[{acroym}]</font></b> <strong>{title}. {pdf}</strong>{distinguishedpaper}<br>{author}.<em>&nbsp;{source}, {loc} {page}, {year}.</em></p></li>'
+        
+        bibDiv = ''
+        if bib != None:
+            bibDiv =  f'<a class="bib-link" onclick="showBib(`{acroym}`)">[BIB]</a>'
+            bibcode[acroym] = bib
+
+        if '-' in acroym:
+            acroym = acroym.split('-')[0]
+            
+        template = f'<li><p><b><font size="3" color="#0b5394">[{acroym}]</font></b> <strong>{title}. {pdf}{bibDiv}</strong>{distinguishedpaper}<br>{author}.<em>&nbsp;{source}, {loc} {page}, {year}.</em></p></li>'
         s = s + template + '\n'
     
-    return s
+    return s, str(bibcode)
 
 
 if __name__ == "__main__":

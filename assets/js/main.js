@@ -390,3 +390,44 @@ const mailEle = document.querySelector('#contact > form > section > dl:nth-child
 tongjimail.onload = function (){
     mailEle.src = tongjimail.src;
 }
+
+
+// bib modal
+
+function showBib(key) {
+    console.log(key)
+    const text = bibData[key] || '% BibTeX entry not found.';
+    document.getElementById('bibTextarea').value = text;
+    document.getElementById('bibCopyBtn').textContent = 'Copy';
+    document.getElementById('bibCopyBtn').classList.remove('copied');
+    document.getElementById('bibModalOverlay').classList.add('active');
+  }
+
+function closeBib() {
+    document.getElementById('bibModalOverlay').classList.remove('active');
+  }
+
+function copyBib() {
+    const textarea = document.getElementById('bibTextarea');
+    textarea.select();
+    textarea.setSelectionRange(0, 99999); // mobile support
+    navigator.clipboard.writeText(textarea.value).then(() => {
+      const btn = document.getElementById('bibCopyBtn');
+      btn.textContent = 'Copied!';
+      btn.classList.add('copied');
+      setTimeout(() => {
+        btn.textContent = 'Copy';
+        btn.classList.remove('copied');
+      }, 2000);
+    });
+}
+
+  // Close modal when clicking the dark overlay background
+  document.getElementById('bibModalOverlay').addEventListener('click', function(e) {
+    if (e.target === this) closeBib();
+  });
+
+  // Close modal with Escape key
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeBib();
+  });

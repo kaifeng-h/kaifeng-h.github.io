@@ -591,6 +591,23 @@
             </ul>
         </div>
 
+        <!-- BIB Modal HTML -->
+        
+        <!-- BIB Modal HTML -->
+        <div class="bib-modal-overlay" id="bibModalOverlay">
+        <div class="bib-modal">
+            <div class="bib-modal-header">
+            <h3>BibTeX Citation</h3>
+            <button class="bib-modal-close-x" onclick="closeBib()">✕</button>
+            </div>
+            <textarea id="bibTextarea" readonly=""></textarea>
+            <div class="bib-modal-actions">
+            <button class="bib-btn-close" onclick="closeBib()">Close</button>
+            <button class="bib-btn-copy" id="bibCopyBtn" onclick="copyBib()">Copy</button>
+            </div>
+        </div>
+        </div>
+
     </div>
 
     <!-- Scripts -->
@@ -600,7 +617,12 @@
     <script src="assets/js/breakpoints.min.js"></script>
     <script src="assets/js/util-min.js"></script>
     <script src="assets/js/keyboard.min.js"></script>
+    <script>
+         var bibData = TEMPLATE_BIB
+    </script>
+    <!-- <script src="assets/js/main-min.js"></script> -->
     <script src="assets/js/main-min.js"></script>
+    
 
 </body>
 

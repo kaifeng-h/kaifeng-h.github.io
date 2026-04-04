@@ -1813,13 +1813,13 @@ ul.actions li:first-child {
 }
 
 #publication > section > div > ol > li > p > strong > a {
-    margin-left: 5px;
-    margin-right: 5px;
+    /* margin-left: 5px;
+    margin-right: 5px; */
     border-radius: 5px;
     color: rgb(11, 83, 148);               /* Text color */
     background-color: transparent; /* Initial background color */
     transition: background-color 0.3s ease; /* Smooth transition */
-    padding: 5px; /* Optional padding for better visibility */
+    padding: 3px; /* Optional padding for better visibility */
 }
 
 #publication > section > div > ol > li > p > strong > a:hover {
@@ -2672,6 +2672,115 @@ a:visited {
 }
 .newsunshow {
     display: none;
+}
+
+
+
+/* BIB Modal */
+.bib-modal-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.55);
+    z-index: 9999;
+    align-items: center;
+    justify-content: center;
+}
+.bib-modal-overlay.active {
+    display: flex;
+}
+.bib-modal {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 8px 40px rgba(0,0,0,0.25);
+    padding: 1.5em 1.8em 1.2em;
+    max-width: 640px;
+    width: 92%;
+    position: relative;
+}
+.bib-modal h3 {
+    margin: 0 0 0.75em;
+    font-size: 1em;
+    color: #0b5394;
+    font-weight: 700;
+}
+.bib-modal textarea {
+    width: 100%;
+    height: 180px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 0.7em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 0.6em;
+    resize: vertical;
+    background: #f8f8f8;
+    color: #222;
+    box-sizing: border-box;
+}
+.bib-modal-actions {
+    display: flex;
+    gap: 0.6em;
+    margin-top: 0.75em;
+    justify-content: flex-end;
+}
+.bib-btn-copy, .bib-btn-close {
+    padding: 0.4em 1.1em;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9em;
+    font-weight: 600;
+    transition: background 0.15s;
+}
+.bib-btn-copy {
+    background: #0b5394;
+    color: #fff;
+}
+.bib-btn-copy:hover { background: #083d6e; }
+.bib-btn-copy.copied { background: #2e7d32; }
+.bib-btn-close {
+    background: #e0e0e0;
+    color: #c8c8c8;
+}
+.bib-btn-close:hover { background: #c8c8c8; }
+.bib-modal-close-x {
+    display: block;
+    margin-left: auto;
+    margin-bottom: 0.4em;
+    background: none;
+    border: none;
+    border-radius: 4px;
+    font-size: 1em;
+    cursor: pointer;
+    color: #888;
+    line-height: 0.1;
+}
+.bib-modal-close-x:hover { color: #c8c8c8; }
+/* BIB inline button */
+a.bib-link {
+     /* margin-left: 5px;
+    margin-right: 5px; */
+    border-radius: 5px;
+    color: rgb(11, 83, 148);
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+    padding: 3px;
+    font-size: inherit;
+    font-weight: inherit;
+    text-decoration: none;
+    cursor: pointer;
+    vertical-align: baseline;
+}
+a.bib-link:hover { background: #083d6e; }
+
+.bib-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.35em;
+}
+.bib-modal h3 {
+    margin: 0;  /* remove the old bottom margin since the header div handles spacing now */
 }
 
 
