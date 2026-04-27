@@ -79,25 +79,31 @@ def updatePub(conn):
     cursor = c.execute('select * from publications order by "order" desc;')
     s = ''
     bibcode = {}
+    authorConfig = False
     for data in cursor:
         title = data[1]
         author = data[3]
-        aus = author.split(';')
         hidden = data[30]
         arxiv = data[31]
         bib = data[33]
         if hidden =='true':
             continue
-        newAus = ''
-        for au in aus:
-            if au == '':
-                continue
-            if not ' ' in au:
-                newAus =  newAus + ' ' + au +','
-                continue
-            auss = au.strip(' ').split(',')
-            auss2 = auss[1].strip(' ') +" "+ auss[0].strip(' ')
-            newAus =  newAus + ' ' + auss2 +','
+        if data[0] == 21:
+            authorConfig = True
+        if authorConfig:
+            aus = author.split(';')
+            newAus = ''
+            for au in aus:
+                if au == '':
+                    continue
+                if not ' ' in au:
+                    newAus =  newAus + ' ' + au +','
+                    continue
+                auss = au.strip(' ').split(',')
+                auss2 = auss[1].strip(' ') +" "+ auss[0].strip(' ')
+                newAus =  newAus + ' ' + auss2 +','
+        else:
+            newAus = author.replace(';',',')
         author = newAus.replace('Kaifeng Huang','<u>Kaifeng Huang</u>')
         author = author.replace('黄凯锋','<u>黄凯锋</u>')
         corresponding = data[4]
