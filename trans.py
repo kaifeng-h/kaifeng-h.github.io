@@ -222,7 +222,7 @@ def mergeToCreateNews(conn, html_all):
                 html = f"""
     <li>
         <p><span class="mydate"><strong>[{formatted_date}]&nbsp;</strong></span>
-            One paper titled "{title}" is accepted by <a href="">{extra}</a>.
+            Our paper titled "{title}" is accepted by <a href="">{extra}</a>.
         </p>
         <p></p>
     </li>
