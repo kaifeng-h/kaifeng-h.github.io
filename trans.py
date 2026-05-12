@@ -1,6 +1,8 @@
 import os
 import sqlite3
 from bs4 import BeautifulSoup
+import pandas as pd
+import re
 
 # main function
 def xiaowang(x):
@@ -14,7 +16,11 @@ def xiaowang(x):
     
     # Update news
     pub, bibcode = updatePub(conn)
-    updated_html = updateNews(conn, html)
+    updatedhtml = mergeToCreateNews(conn, html)
+
+    updated_html = updateNews(conn, updatedhtml)
+
+        
     
     # Update pubs
     with open('index.html','w') as f:
@@ -166,7 +172,201 @@ def updatePub(conn):
     return s, str(bibcode)
 
 
+
+def mergeToCreateNews(conn, html_all):
+    query_file = './src/SQLquery/merge_talks_services_publications'
+    rows = []
+    with open(query_file, 'r') as f:
+        query = f.read()
+        c =  conn.cursor()
+        cursor = c.execute(query)
+        for item in cursor:
+            # print(item)
+            rows.append(item)
+    # Close connection
+    conn.close()
+
+
+    html_results = []
+
+    for row in rows:
+
+        row_type = row[0]
+        title = row[1]
+        date = row[2]
+        extra = row[3]
+        year = row[4]
+
+        formatted_date = format_date(date)
+
+        # -----------------------------------
+        # Publications
+        # -----------------------------------
+        if row_type == "publication":
+
+            if is_conference_publication(extra):
+
+                venue = extra.replace("'", " 20")
+
+                html = f"""
+    <li>
+        <p><span class="mydate"><strong>[{formatted_date}]&nbsp;</strong></span>
+            Our paper titled "{title}" is accepted by <a href="">{venue}</a>.
+        </p>
+        <p></p>
+    </li>
+    """.strip()
+
+            else:
+
+                html = f"""
+    <li>
+        <p><span class="mydate"><strong>[{formatted_date}]&nbsp;</strong></span>
+            One paper titled "{title}" is accepted by <a href="">{extra}</a>.
+        </p>
+        <p></p>
+    </li>
+    """.strip()
+
+            html_results.append(html)
+
+        # -----------------------------------
+        # Services
+        # -----------------------------------
+        elif row_type == "service":
+
+            if is_conference_service(title):
+
+                # extra format:
+                # ISSTA 2026---https://conf.researchr.org/home/issta-2026
+
+                short_name = title
+                website = ""
+                track = ''
+                if extra and "---" in extra:
+                    parts = extra.split("---")
+                    short_name = parts[0]
+                    website = parts[1]
+                    track = parts[2]
+                if track == '':
+                    html = f"""
+            <li>
+                <p><span class="mydate"><strong>[{formatted_date}]&nbsp;</strong></span>
+                    I was invited to serve on the Program Committee at
+                    <a href="{website}">{short_name}</a>.
+                <p></p>
+            </li>
+            """.strip()
+                else:
+
+                    html = f"""
+            <li>
+                <p><span class="mydate"><strong>[{formatted_date}]&nbsp;</strong></span>
+                    I was invited to serve on the Program Committee of the {track} at
+                    <a href="{website}">{short_name}</a>.
+                <p></p>
+            </li>
+            """.strip()
+
+            else:
+
+                html = f"""
+        <li>
+            <p><span class="mydate"><strong>[{formatted_date}]&nbsp;</strong></span>
+                I was invited to serve as a reviewer for {title}.
+            <p></p>
+        </li>
+        """.strip()
+
+            html_results.append(html)
+
+        # -----------------------------------
+        # Awards
+        # -----------------------------------
+        elif row_type == "awards":
+
+            html = f"""
+    <li>
+        <p><span class="mydate"><strong>[{formatted_date}]&nbsp;</strong></span>
+            I was honored to be selected as a {title} for {extra}!
+        <p></p>
+    </li>
+    """.strip()
+
+            html_results.append(html)
+
+        # -----------------------------------
+        # Talks
+        # -----------------------------------
+        elif row_type == "talk":
+
+            if contains_chinese(title):
+
+                html = f"""
+    <li>
+        <p><span class="mydate"><strong>[{formatted_date}]&nbsp;</strong></span>
+            {extra}报告：<a href="">{title}</a>.
+        <p></p>
+    </li>
+    """.strip()
+
+            else:
+
+                html = f"""
+    <li>
+        <p><span class="mydate"><strong>[{formatted_date}]&nbsp;</strong></span>
+            I was invited to give a talk at <a href="">{extra}</a>.
+        <p></p>
+    </li>
+    """.strip()
+
+            html_results.append(html)
+
+    # Print all generated HTML
+    res = ''
+    for item in html_results:
+        res = res + item
+        res = res + '\n'
+
+    return  html_all.replace('NEWS_CONTENT', res)
+
+
+def format_date(date_str):
+    year, month, _ = date_str.split("-")
+    return f"{year}.{month}"
+
+
+def is_conference_publication(venue):
+    return bool(re.match(r".+'\d{2}$", venue))
+
+
+def is_conference_service(name):
+    keywords = [
+        "conference",
+        "symposium",
+        "workshop",
+        "forum",
+        "summit"
+    ]
+    name_lower = name.lower()
+    return any(k in name_lower for k in keywords)
+
+
+def contains_chinese(text):
+    return bool(re.search(r'[\u4e00-\u9fff]', text))
+
+
+
+
 if __name__ == "__main__":
     xiaowang("dahuang")
+
+
+
+
+
+
+
+
 
 

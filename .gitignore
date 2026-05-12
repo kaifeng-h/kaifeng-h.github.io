@@ -6,3 +6,4 @@ src/local
 .DS_Store
 images/new.psd
 trans.py
+index_template.html
