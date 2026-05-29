@@ -174,7 +174,7 @@ def updatePub(conn):
 
 
 def mergeToCreateNews(conn, html_all):
-    query_file = './src/SQLquery/merge_talks_services_publications'
+    query_file = './src/SQLquery/merge_talks_services_publications.sql'
     rows = []
     with open(query_file, 'r') as f:
         query = f.read()
