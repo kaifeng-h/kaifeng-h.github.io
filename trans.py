@@ -371,7 +371,7 @@ def contains_chinese(text):
 
 
 if __name__ == "__main__":
-    if len(sys.argv)>=1:
+    if len(sys.argv)>=2:
         if sys.argv[1] == 'zh':
             xiaowang("dahuang",'zh')
         if sys.argv[1] == 'en':
