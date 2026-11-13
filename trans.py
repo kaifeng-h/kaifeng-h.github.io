@@ -3,28 +3,40 @@ import sqlite3
 from bs4 import BeautifulSoup
 import pandas as pd
 import re
+import sys
 
 # main function
-def xiaowang(x):
+def xiaowang(x, language):
     if x == "dahuang":
         print("爱你哦～")
     else:
         print("win nio~")
     conn = sqlite3.connect('./src/info.sqlite')
-    with open('index_template.html','r') as f:
+    if language == 'en':
+        index_file = 'index_template.html'
+        output_file = 'index.html'
+    else:
+        index_file = 'index-zh_template.html'
+        output_file = 'index-zh.html'
+
+    with open(index_file,'r') as f:
         html = f.read()
     
-    # Update news
+    # Update Pubs
     pub, bibcode = updatePub(conn)
+
+    # Update news
     updatedhtml = mergeToCreateNews(conn, html)
 
     updated_html = updateNews(conn, updatedhtml)
 
-        
+    # Replace template:
+    updated_html = updated_html.replace('index-zh_template.html', 'index-zh.html')
+    updated_html = updated_html.replace('index_template.html', 'index.html')
     
     # Update pubs
-    with open('index.html','w') as f:
-        updated_pub = updated_html.replace("PUBLICATION__CONTENT", pub) #.replace("NEWS__CONTENT", pub)
+    with open(output_file,'w') as f:
+        updated_pub = updated_html.replace("PUBLICATION__CONTENT", pub) 
         updated_pub_bib = updated_pub.replace("TEMPLATE_BIB", bibcode)
         f.write(updated_pub_bib)
 
@@ -359,7 +371,13 @@ def contains_chinese(text):
 
 
 if __name__ == "__main__":
-    xiaowang("dahuang")
+    if len(sys.argv)>=1:
+        if sys.argv[1] == 'zh':
+            xiaowang("dahuang",'zh')
+        if sys.argv[1] == 'en':
+            xiaowang("dahuang",'en')
+    else:
+        xiaowang("dahuang",'en')
 
 
 
