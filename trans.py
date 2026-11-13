@@ -75,8 +75,8 @@ def updateNews(conn, html):
 
         #
     # Transform the BeautifulSoup object back into an HTML document
-    updated_html = soup.prettify()  # For nicely formatted HTML
-    # print(updated_html)
+    updated_html = soup.prettify(formatter="html")  # For nicely formatted HTML
+    updated_html = updated_html.replace('SPACE-HERE', '&nbsp;')
     return updated_html
     
 def updatePub(conn):

@@ -233,7 +233,7 @@ function updown(s) {
     page_name = page_name[page_name.length - 1]
     console.log(page_name)
     // pages = ['home','news', 'publication', 'education', 'awards', 'contact']
-    pages = ['home','news', 'publication', 'tools', 'service', 'contact']
+    pages = ['home','news', 'publication', 'mentor', 'tools', 'service', 'contact']
     index = 0;
     for (i = 0; i < pages.length; i++) {
         tmp = pages[i];
